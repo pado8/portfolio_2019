@@ -1,0 +1,125 @@
+﻿/* 메인 비쥬얼 */
+#mainVisual{width: 1400px; height:1211px; margin: 0 auto; /* background: #999999; */ }
+#mvTop{width: 1300px; height: 147px; margin-bottom: 30px; padding: 50px 50px 0 50px;}
+	#mvTop .mvButton1{width: 200px; height: 100px;}
+	#mvTop .mvButton1 a{display: block; margin-bottom: 8px;}
+	#mvTop .mvButton1 span{padding-left: 12px; font-size: 18px; text-align: center;}
+	#mvTop .mvButton1 img{width: 85px; height: 85px;}
+	#mvTop .mvButton2{width: 200px; height: 100px;}
+	#mvTop .mvButton2 a{display: block; margin-bottom: 8px;}
+	#mvTop .mvButton2 span{padding-left: 8px; font-size: 18px; text-align: center;}
+	#mvTop .mvButton2 img{width: 85px; height: 85px;}
+	#mvTop .mvSearch{width: 500px;}
+	#mvTop .mvSearch .searchBox{width: 100%; height: 70px; padding: 10px; border: 3px solid #267dde; border-radius: 40px; box-sizing: border-box;}
+	#mvTop .mvSearch .searchBox input{padding: 10px; margin-left: 10px; line-height: 50px;}
+	#mvTop .mvSearch .searchBox img{padding: 10px 0px;}
+	#mvTop .mvSearch .searchBox .searchWord{width: 350px; height: 26px; border: none;}
+	#mvTop .mvSearch .searchkeyWord{margin-top: 20px;}
+	#mvTop .mvSearch .searchkeyWord span{font-size: 17px; padding-left: 8px; color: #555555;}
+	#mvTop .mvWeather{width: 350px; height: 100px; margin-left: 50px;}
+	#mvTop .mvWeather img{width: 80px; height: 80px;} 
+	#mvTop .mvWeather .Temper{font-size: 3.1em; margin-left: 15px; color: #000000; font-weight: bold;  padding-left: 5px; line-height: 75px;} 
+	#mvTop .mvWeather .Dust{color: #000000;  padding-left: 5px; padding-bottom: 10px;} 
+	#mvTop .mvWeather .Normal{color: #00b300;  padding-left: 5px;} 
+	#mvTop .mvWeather .Link{width: 20px; height: 20px; margin-top: 30px; padding-left: 5px;}
+
+#mvCenter{width: 1400px; height: 500px; /* background: #a6ff4c; */ margin-bottom: 30px;}
+	#mvCenter .mvPosts{width: 400px; height: 477px;}
+	#mvCenter .mvPosts .mvPtit{height: 35px; background: #2389c1; padding: 5px 15px; font-weight: bold; line-height: 35px; font-size: 18px; margin-bottom: 5px; color: #ffffff;}
+	#mvCenter .mvPosts img{float:right; padding: 12px 2px; width: 15px; height: 12px;}
+	#mvCenter .mvPosts .postList ul li{padding:15px; border-bottom: 1px solid #999999;}
+	#mvCenter .mvPosts .postList ul li a{color: #000000; font-size: 17px; letter-spacing: -1px;}
+	#mvCenter .mvPosts .postList ul li span{margin-right:10px; padding: 0px 2px; font-size: 0.8em; color: #ffffff; background-color: #00a3d9; letter-spacing: 1px;}
+	#mvCenter .mvPosts .postList ul li > img{float:right; padding-top: 7px; width: 7px;}
+	.mvEvent{width: 970px; height: 477px; margin-left: 30px;}
+	.mvEvent .mvEventwrap{width: 950px; height: 420px;}
+	.mvEvent .mvEventlist{width: 930px; height: 30px; margin-top: 15px; border: 1px solid #cfcfcf; padding: 10px;}
+	.mvEvent .mvEventlist span{color: #000000; font-size: 18px;}
+	.mvEvent .mvEventlist span .blue{color: #267dde; font-size: 18px; font-weight: bold;}
+	.mvEvent .mvEventlist span img{float:right; padding: 10px; height: 10px;}
+	.mvEvent .mvEventlist span a{color: #000000; font-size: 18px;}
+	
+#mvBottom{width: 1400px; height: 479px; margin-bottom: 30px;}
+	.mvNotice .mvNoticetit{width: 750px; height: 82px;}
+	.mvNotice .mvNoticetit ul li{float: left; width: 148.9px; height: 75px; background: #f7f7f7; border: 1px solid #cfcfcf; text-align: center; font-size: 19px; box-sizing: border-box;  line-height: 75px;}
+	.mvNotice .mvNoticetit ul li a{display: block; color: #555555;}
+	.mvNotice .mvNoticetit ul li a:hover{background-color: #1da3a9; color: #ffffff; font-weight: bold;}
+	.mvNotice .mvNoticewrap ul li{padding: 11px 3px; font-size: 19px; width: 740px;}
+	.mvNotice .mvNoticewrap ul li .green{color: #1da3a9;}
+	.mvNotice .mvNoticewrap ul li .date{float: right;}
+	.mvNotice .mvNoticeft{width: 750px; height: 50px; text-align: center; border-top: 1px solid #555555; border-bottom: 1px solid #555555; margin-top: 20px;}
+	.mvNotice .mvNoticeft a{line-height: 50px; color: #555555;}
+	
+	.mvBanner{width: 490px; height: 240px; margin-left: 80px; border: 1px solid #cfcfcf; padding: 30px; background: url(../images/profile.jpg) no-repeat;}
+	.mvBanner p{font-size: 22px; padding-left: 12px;}
+	.mvBanner .Bablue{color: #267dde; font-weight: bold;}
+	.mvBanner strong{font-size: 1.5em; font-weight: bold; color: #000040;}
+	.mvBanner .mayorBox{width: 300px; height: 150px; margin-top: 30px;}
+	.mvBanner .mayorBox ul li{float: left; padding: 5px;}
+	.mvBanner .mayorBox ul li a{display: block; text-decoration: none; font-size: 22px; color: #222222; border-bottom: 1px solid #222222; padding-bottom: 3px;}
+	
+	
+	.mvJobinfo{width: 510px; height: 68px; margin-left: 80px; margin-top: 30px; border: 1px solid #cfcfcf; padding: 20px;}
+	.mvJobinfo span{color: #267dde; font-weight: bold; font-size: 18px;}
+	.mvJobinfo .jobImg img{float: right; margin: 5px;}
+	.mvJobinfo .jobMore img{margin: 5px; width: 18px; height: 18px;}
+
+#iconbutton{width: 100%; height: 158px; background: #ffffff; padding-top: 30px;}
+	.iconBg{width: 100%; height: 20px; background: url(../images/main_ico_line.gif) repeat-x left top;}
+	.iconbuttonMenu{width: 1400px; margin: 0 auto;}
+	.iconbuttonMenu ul li{width: 12.5%; float: left; text-align: center;}
+	.iconbuttonMenu ul li a{display: block;}
+	.iconbuttonMenu ul li img{display: block; margin: 15px auto; width: 60px; height: 60px;}
+	.iconbuttonMenu ul li span{color: #555555; font-size: 18px;}
+#eventWrapbg{width: 100%; height:849px; margin-top: 30px; background: url(../images/main_col5_bg2.jpg) no-repeat center center; background-size: cover;}
+	.eventWrap{width: 1400px; height: 749px; margin: 0 auto;}
+	.ewVisit{width: 480px; height: 600px; margin-right: 60px;}
+	.ewVisit .ewvisitTit{padding: 50px 0px;}
+	.ewVisit .ewvisitTit .potoImg{font-size: 23px; font-weight: bold; line-height: 55px; color: #000040;}
+	.ewVisit .ewvisitTit .potoImg img{margin-right: 15px;}
+	.ewVisit .ewvisitTit .evArrow img{float: right; padding: 25px 8px 25px 5px; width: 8px; height: 12px;}
+	.ewShowevent{width: 860px; height: 600px;}
+	.ewShowevent .ewshowTit{padding: 50px 0px;}
+	.ewShowevent .ewshowTit .calImg{font-size: 23px; font-weight: bold; line-height: 55px; color: #000040;}
+	.ewShowevent .ewshowTit .calImg img{margin-right: 15px;}
+	.ewShowevent .ewshowTit .evshArrow{float: right; line-height: 60px;}
+	.ewShowevent .ewshowTit .evshArrow a{color: #000040;  margin-right: 10px;}
+	.ewShowevent .ewshowTit .evshArrow img{float: right; padding: 25px 8px 25px 5px; width: 8px; height: 12px;}
+	.ewShowevent .ewshowImg img{width: 269px; height: 400px; padding-right: 12px;}
+	.ewShowevent .ewshowText span{width: 276px; height: 50px; float: left; padding: 25px 5px 0 0; font-size: 20px; color: #000000; letter-spacing: -1px;}
+	.ewShowevent .ewshowText span.show2{padding-left: 5px;}
+	.ewShowevent .ewshowText span.show3{padding-left: 7px;}
+	.ewShowevent .ewshowDate span{width: 276px; height: 50px; float: left; padding: 15px 5px 0 0; font-size: 20px; color: #000000; letter-spacing: -1px;}
+	.ewShowevent .ewshowDate span.show2{padding-left: 5px;}
+	.ewShowevent .ewshowDate span.show3{padding-left: 7px;}
+	.ewShowevent .ewshowDate a{width: 144px; display: block; text-decoration: none; letter-spacing: -1px; color: #000000;}
+	.ewBtmenu{width: 1400px; height: 100px; margin: 0 auto;}
+	.ewBtmenu ul .blueBg{background-color: #267dde;}
+	.ewBtmenu ul .greenBg{background-color: #1da3a9;}
+	.ewBtmenu ul li{width: 233.33px; height: 100px; float:left;}
+	.ewBtmenu ul li img{width: 40px; height: 40px;}
+	.ewBtmenu ul li a{display: block; color: #ffffff; padding: 30px; line-height: 45px;}
+	.ewBtmenu ul li a span{padding-left: 10px; font-size: 18px;}
+
+#slideMenu{width: 1400px; height: 75px; margin: 0 auto;}
+	#slideMenu .slidemenuArrow{float: left;}
+	#slideMenu .slidemenuArrow img{width: 9px; padding: 30px 5px; margin-right: 15px;}
+	#slideMenu ul li{float: left; padding: 23px 35px;}
+	#slideMenu ul li a{color: #555555; font-size:20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

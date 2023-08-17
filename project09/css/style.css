@@ -1,0 +1,658 @@
+﻿@charset "utf-8";
+/* reset css */
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: black; }
+img { border: 0; vertical-align: top; }
+body{ font: 14px "Malgun Gothic","맑은 고딕", "Dotum", "돋움", "sans-serif"; letter-spacing: -1px; }
+em {font-style: normal;}
+button { border: none; background: none; cursor: pointer; }
+
+q:before,q:after{content:''}
+.fl{float: left;}
+.fr{float: left;}
+.cb{clear: both;}
+.cf:after{content:''; display: block; clear: both;}
+/* global */
+section{width: 100%;}
+div.inner{width: 1400px; height: auto; position: relative; left: 0; top: 0; margin: 0 auto;}
+h2{font-size: 40px; font-weight: normal;}
+h2 span{color: #e80f1e;}
+.red{color:#e80f1e;}
+.backnone{background-color: #ffffff;}
+
+/* lnb */
+div#localMenu{width: 100%; height: 114px;  border-bottom: 1px solid #e1e1e9;}
+div#localMenu ul{float: right;  position: absolute; top: 77px; right: 5px;}
+div#localMenu ul li{display: block; float: left;}
+div#localMenu ul li a{display: inline-block; padding: 10px 10px; color: #4e4e4e; text-align: center;}
+div#localMenu ul li a:hover{border-bottom: 1px solid #e80f1e;}
+div#localMenu ul li a:focus{border-bottom: 1px solid #e80f1e;}
+div#localMenu ul li a span{width: 15px; height: 15px; line-height: 1em; display: inline-block; background: orange; border-radius: 50%; color: #4e4e4e;}
+
+
+/* all menu items */
+#localMenu ul .menuAll{/* background: #444444; */}
+#localMenu ul li #menuAll{display: none; width: 100%; height: 100px; position: absolute; left: 0; top: 37px; background: rgba(0,200,0,0.6); z-index: 999999;}
+
+
+/*=========================================
+    header
+===========================================*/
+header#mainHeader{position: fixed; top: 115px; width: 100%; background: #ffffff; z-index: 99999; border-bottom: 1px solid #333333;}
+h1{position: absolute; top: 10px; left: 550px; z-index: 1;}
+h1 a{text-align: center; display: block; width: 200px; height: 91px; background: url(../images/logo.png) no-repeat center; text-indent: -9999px;}
+h1 img{width: 197px; height: 96px;}
+
+
+/* gnb --------------------------------- */
+nav#gnb{width: 100%; height: 60px; position: relative;}
+#total_btn{position: absolute; top: 11px; left:5px; text-align: center;}
+#total_btn a{display: block; width: 38px; height: 38px; background: url(../images/siteBoxbtn.png) 0 0 no-repeat;}
+nav#gnb > ul {position: absolute; left: 65px;}
+nav#gnb > ul > li{float: left; margin-right: 45px;}
+nav#gnb > ul > li.first{margin-left: 40px;}
+nav#gnb > ul > li > a{display: block; height: 58px; margin: 0 30px; color: #111111; font-size: 1.4em; line-height: 58px; border-bottom: 2px solid #ffffff; text-align: center; letter-spacing: 1px; font-weight: bold;}
+nav#gnb > ul > li > a.on{border-bottom: 2px solid #e80f1e; color: #e80f1e;}
+nav#gnb > ul > li > a:hover{border-bottom: 2px solid #e80f1e; color: #e80f1e;}
+nav#gnb > ul > li > a:focus{border-bottom: 2px solid #e80f1e; color: #e80f1e;}
+nav#gnb > ul > li.nth3 > a{position: relative;}
+
+
+/* 학습하기 버튼 */
+nav#gnb > ul > li.last{position: relative; top: 8px; width: 170px; height: 40px; margin-left: 30px; margin-right: 0px;}
+nav#gnb > ul > li.last > a{width: 140px; height: auto; line-height: 35px; border-radius: 20px; border: none; background: #e80f1e; color: #ffffff; text-align: center; padding-bottom: 1px; margin: 0; margin-top: 1.5px; transition: all .3s;}
+nav#gnb > ul > li.last > a:hover{background: #ec3a60;}
+nav#gnb > ul > li.last > a:focus{background: #ec3a60;}
+nav#gnb > ul > li.freeStudy a{border: none;}
+nav#gnb > ul > li a img{position: relative; top: -26px; right: -131px;}
+
+
+/* lv1 sub menu */ 
+nav#gnb > ul > li > div.subWrapper {
+    position: absolute;
+    top: 60px;
+    background: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #ec3a60;
+    overflow: hidden;
+    padding: 20px 30px;
+} 
+
+nav#gnb > ul > li > div a {
+    color: #000000;
+    line-height: 1.8;
+    transition: all .3s;
+}
+
+/* lv2 sub menu */
+nav#gnb > ul > li > div ul.lv2Sub{padding: 5px 0;}
+nav#gnb > ul > li > div ul.lv2Sub a {font-size: 13px; color: #888888; margin-left: 10px;}
+nav#gnb > ul > li > div a:hover{color: #ec3a60;}
+nav#gnb > ul > li > div a:focus{color: #ec3a60;}
+nav#gnb > ul > li > div ul.lv2Sub a:hover{color: #ec3a60;}
+nav#gnb > ul > li > div ul.lv2Sub a:focus{color: #ec3a60;}
+
+/* 전체 메뉴 영역 */
+nav #total_menu{width: 1400px; height: 280px; background: #ededed; position: absolute; top: 60px; left: 0px; display: none;     	 
+	background: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #ec3a60;
+    overflow: hidden;}
+nav #total_close{position: absolute; bottom: 12px; right: 34px;}
+nav #total_menu > ul > li a {
+    color: #000000;
+    line-height: 1.8;
+    transition: all .3s;
+}
+
+nav #total_menu dl{float: left;}
+nav #total_menu dt{font-size: 0px;}
+nav #total_menu dd{border-right: 1px solid #ec3a60; width: 190px; height: 280px;}
+nav #total_menu dd.first{width: 110px; height: 280px; background: url(../images/menu_banner.png) no-repeat;}
+nav #total_menu dd.first a{display: block; width: 110px; height: 280px}
+nav #total_menu dd.blast{width: 170px; height: 280px; margin-left: 10px;}
+
+/* nav #total_menu ul {}
+nav #total_menu ul li{float: left; padding-left: 10px;}
+nav #total_menu ul li ul{}
+nav #total_menu ul li ul{float: left;} */
+nav #total_menu ul{padding: 15px;}
+nav #total_menu ul li{padding: 5px 0;}
+nav #total_menu ul li ul li{padding: 2px 0;}
+nav #total_menu ul li ul.lv2Sub{padding: 5px 0;}
+nav #total_menu ul li ul.lv2Sub a {font-size: 13px; color: #888888; margin-left: 10px;}
+nav #total_menu ul li a:hover{color: #ec3a60;}
+nav #total_menu ul li a:focus{color: #ec3a60;}
+nav #total_menu ul li ul.lv2Sub a:hover{color: #ec3a60;}
+nav #total_menu ul li ul.lv2Sub a:focus{color: #ec3a60;}
+
+
+
+/* side family links --------------------- */
+div#sideFamilyLinks{width: 135px; position: absolute; left: 0; top: 0; color: #ffffff; text-align: center; transition: all .5s ease;}
+div#sideFamilyLinks h3{height: 44px; background: #e80f1e; padding: 8px 20px; color: #ffffff;}
+div#sideFamilyLinks div#sideMenuWrap{width: 135px; height: auto; background: #333333; overflow: hidden;}
+
+
+/* 클래스를 주어 폴드 된 상태 */
+div#sideFamilyLinks div#sideMenuWrap.fold{height: 0;}
+div#sideFamilyLinks a#sideMenuHandle{display: block; width: 135px; height: 15px; position: absolute; left: 0; bottom: -15px; margin-top: -40px; background: url(../images/side_menu_handle.png) no-repeat center; text-indent: -9999px;}
+
+
+/* 폴드 된 상태에서 열기 버튼 이미지 */
+div#sideFamilyLinks div#sideMenuWrap.fold + a{background: url(../images/side_menu_handle_fold.png) no-repeat center;}
+div#sideFamilyLinks div#sideMenuWrap.fold + a:hover{background: url(../images/side_menu_handle_fold_on.png) no-repeat center;}
+
+
+/* 열린 상태에서 닫기 버튼 이미지 */
+div#sideFamilyLinks a#sideMenuHandle:hover{background: url(../images/side_menu_handle_on.png) no-repeat center;}
+div#sideFamilyLinks a#sideMenuHandle:focus{background: url(../images/side_menu_handle_on.png) no-repeat center;}
+
+div#sideFamilyLinks a#addFavorite{display: block; padding: 15px 0; background: #b30000; color: #ffffff; transition: all .3s;}
+div#sideFamilyLinks a#addFavorite:hover{color: #ffff00;}
+div#sideFamilyLinks a#addFavorite:focus{color: #ffff00;}
+
+div#sideFamilyLinks ul#links a{display: block; padding: 15px 0; color: white; background: #222222; border-bottom: 1px solid #333333; transition: all .3s;}
+div#sideFamilyLinks ul#links a:hover{background: #ffffff; color: #ff0000;}
+div#sideFamilyLinks ul#links a:focus{background: #ffffff; color: #ff0000;}
+
+
+/* IR(Image Replace) + IS(Image Sprites) */
+div#sideFamilyLinks ul#banners a{display: block; width: 135px; height: 100px; text-indent: -9999px; background: url(../images/family_ban.png) no-repeat; opacity: .7;}
+div#sideFamilyLinks ul#banners li.nth2 a{background-position: -135px 0;}
+div#sideFamilyLinks ul#banners li.nth3 a{background-position: -270px 0;}
+div#sideFamilyLinks ul#banners a:hover{opacity: 1;}
+div#sideFamilyLinks ul#banners a:focus{opacity: 1;}
+
+
+/*==================================
+    contents
+===================================*/
+
+/* main visual slide -------------------------------*/
+#visual{height: 480px; position: relative; top:1px;}
+	.touch_bullet{position: absolute; top: 452px; left: 51%; margin-left: -52px;}
+	.touch_bullet li{float: left;}
+	.touch_left_btn{position: absolute; top: 47%; left: 255px; margin-top: -25px;}
+	.touch_right_btn{position: absolute; top: 47%; right: 235px; margin-top: -25px;}
+#contents{width:1400px; margin:0 auto; padding-left: 50px;/*  position:relative; top:1px; position:relative; top:1px; */ }
+/* Swipe 2 required styles */
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > li {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+/* END required styles */
+#mySwipe img{width:100%; max-width:100%; height:480px; margin-top:46px; }
+.touch_banner li a{display:block; height:480px;}
+.main_visual1{background:url(../images/visual01.jpg) center center no-repeat; background-size: cover;}
+.main_visual2{background:url(../images/visual02.jpg) center center no-repeat; background-size: cover;}
+.main_visual3{background:url(../images/visual03.jpg) center center no-repeat; background-size: cover;}
+.main_visual4{background:url(../images/visual04.jpg) center center no-repeat; background-size: cover;}
+.main_visual5{background:url(../images/visual05.jpg) center center no-repeat; background-size: cover;}
+
+
+
+
+/* main slide -------------------------------*/
+section#mainSlide{margin-top: 60px; width: 100%; height: 1050px; transition: all 1s; background-color: #f1f3f8;}
+section#mainSlide h2{text-indent: 9999px; display: none;}
+section#mainSlide ol{position: relative; width : 1400px; height: 380px; top: 0px; overflow: hidden; margin: 0 auto;}
+section#mainSlide ol li{width: 100%; height: 100%;}
+section#mainSlide ol li > button{display: block; position: absolute; top: 0px; width: 253px; height: 56px; background: red; box-sizing: border-box; border: none; border-left: 1px solid #999999; cursor: pointer; background: #b30000; border-radius: 20px 20px 0 0;}
+section#mainSlide ol li > button span{width: 100%; height: 100%; font: normal 14px/56px "맑은 고딕"; overflow: hidden;}
+section#mainSlide ol li > button span span{color: #ffffff;}
+section#mainSlide ol li > button span span.extraText{display: none;}
+section#mainSlide ol li > button span span br{display: none;}
+
+.taTopTitle{padding: 40px 0; text-align: center; font-size: 30px; color: #2a2a2a; margin-top: 20px; letter-spacing: 1px;}
+
+/* tab 버튼 배치*/
+section#mainSlide ol li.tab1 > button{right: 521px; margin-right: 15px;}
+section#mainSlide ol li.tab2 > button{right: 253px; margin-right: 15px;}
+section#mainSlide ol li.tab3 > button{right: 0;}
+
+
+/* tabOn */
+section#mainSlide ol li.tabOn > button{width: 280px; height: 380px; bottom: 0; left: 0; border: none; z-index: 2; background: #999999;}
+section#mainSlide ol li.tabOn > button span{font: normal 26px/40px "맑은 고딕";}
+section#mainSlide ol li.tabOn > button span span.extraText{display: block; font-size: 14px; line-height: 1.6; font-weight: normal; margin-top: 30px; color: #ffffff;}
+section#mainSlide ol li.tabOn > button span span.titleNumber{display: block; position: absolute; top: 30px;
+left: 108px; width: 70px; height: 70px;border-radius: 50%; border: 1px solid #ffffff; line-height: 70px;}
+section#mainSlide ol li.tabOn > button span span.titleText{display: block; margin-top: 130px;}
+section#mainSlide ol li.tabOn > button span span br{display: block;}
+section#mainSlide ol li.tabOn > button span span.period{display : none;}
+section#mainSlide ol li.tabOn > button span span.blank{display: none;}
+section#mainSlide ol li.tabOn > button span span strong{font-weight: bold;}
+
+
+/* 탭 컨텐츠 */
+section#mainSlide ol li > div{position: absolute; bottom: 0px; right: 0; width: 1120px; height: 324px; box-sizing: border-box; padding: 40px; background: #ffffff;}
+
+
+/* tabOn의 하위 컨텐츠 최상단으로 올리기 */
+section#mainSlide ol li.tabOn > div{z-index: 1;}
+section#mainSlide ol li > div p{float: left; color: #b9d0ff; font: 14px/1.5 "맑은 고딕";}
+section#mainSlide ol li > div span{color: #ffffff;}
+
+
+/* 탭 컨텐츠 */
+section#mainSlide ol li > div > button{display: block; width: 310px; height: 197px; float: right; text-indent: -9999px; background: red url(../images/main_sl1_thumb.jpg) no-repeat center;}
+
+/* tab 공통 스타일 */
+section#mainSlide ol li div a{display: block; float: left; width: 234px; height: 100%;}
+section#mainSlide ol li > div a p{width: 100%; height: 100%; background: url(../images/main_sl3_thumb1.jpg) no-repeat center top; box-sizing: border-box; padding-top: 140px; text-align: center; color: #b9d0ff;}
+
+/* tab 1번 컨텐츠 */
+section#mainSlide ol li#maintabNth1 > div{padding: 30px;}
+section#mainSlide ol li#maintabNth1 > div a p{padding-top: 130px;}
+section#mainSlide ol li#maintabNth1 > div a p span{display: block; margin-top: 5px; font-size: 13px;}
+section#mainSlide ol li#maintabNth1 > div a.nth1 p{background: url(../images/main_sl11_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth1 > div a.nth2 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth1 > div a.nth2 p{background: url(../images/main_sl12_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth1 > div a.nth3 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth1 > div a.nth3 p{background: url(../images/main_sl13_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth1 > div a.nth4 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth1 > div a.nth4 p{background: url(../images/main_sl14_bg.png) no-repeat center;}
+
+/* tab 2번 컨텐츠 */
+section#mainSlide ol li#maintabNth2 > div{padding: 30px;}
+section#mainSlide ol li#maintabNth2 > div a p{padding-top: 130px;}
+section#mainSlide ol li#maintabNth2 > div a p span{display: block; margin-top: 5px; font-size: 13px;}
+section#mainSlide ol li#maintabNth2 > div a.nth1 p{background: url(../images/main_sl21_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth2 > div a.nth2 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth2 > div a.nth2 p{background: url(../images/main_sl22_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth2 > div a.nth3 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth2 > div a.nth3 p{background: url(../images/main_sl23_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth2 > div a.nth4 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth2 > div a.nth4 p{background: url(../images/main_sl24_bg.png) no-repeat center;}
+
+/* tab 3번 컨텐츠 */
+section#mainSlide ol li#maintabNth3 > div{padding: 30px;}
+section#mainSlide ol li#maintabNth3 > div a p{padding-top: 130px;}
+section#mainSlide ol li#maintabNth3 > div a p span{display: block; margin-top: 5px; font-size: 13px;}
+section#mainSlide ol li#maintabNth3 > div a.nth1 p{background: url(../images/main_sl31_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth3 > div a.nth2 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth3 > div a.nth2 p{background: url(../images/main_sl32_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth3 > div a.nth3 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth3 > div a.nth3 p{background: url(../images/main_sl33_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth3 > div a.nth4 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth3 > div a.nth4 p{background: url(../images/main_sl34_bg.png) no-repeat center;}
+
+
+/* tab 4번 컨텐츠 */
+section#mainSlide ol li#maintabNth4 > div{padding: 30px;}
+section#mainSlide ol li#maintabNth4 > div a p{padding-top: 130px;}
+section#mainSlide ol li#maintabNth4 > div a p span{display: block; margin-top: 5px; font-size: 13px;}
+section#mainSlide ol li#maintabNth4 > div a.nth1 p{background: url(../images/main_sl41_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth4 > div a.nth2 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth4 > div a.nth2 p{background: url(../images/main_sl42_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth4 > div a.nth3 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth4 > div a.nth3 p{background: url(../images/main_sl43_bg.png) no-repeat center;}
+section#mainSlide ol li#maintabNth4 > div a.nth4 {margin-left: 40px; }
+section#mainSlide ol li#maintabNth4 > div a.nth4 p{background: url(../images/main_sl44_bg.png) no-repeat center;}
+
+/* review ------------------------------------*/
+section#review{overflow: hidden; background: #fbfbfb;}
+section#review h2{text-align: center; margin-top: 40px;}
+#review ul{width: 1400px; margin: 40px auto;}
+
+/* 클리어픽스 */
+#review ul:after{content:''; display: block; clear: both;}
+#review li{margin: 0 0 30px 30px; float: left;}
+#review ul li.nth1{margin: 0 0 15px 0;}
+#review ul li.nth5{margin: 0 0 15px 0;}
+#review li > a{display: block; width: 256px; height: 262px; padding: 20px; box-sizing: border-box; background: url(../images/review_off.png) no-repeat top; color: #666666; position: relative; transition: all .2s;}
+#review li > a:hover{background: url(../images/review_on1.png) no-repeat top;}
+#review li > a:focus{background: url(../images/review_on1.png) no-repeat top;}
+#review li > article{width: 241px; height: 262px; padding: 20px; box-sizing: border-box; text-align: center;}
+#review li > article > a.moreReviews{display: block; width: 180px; height: 30px; border-radius:20px; border: 1px solid #ec3a60; margin: 20px auto 0; color: #e80f1e; background: #ffffff; line-height: 28px; transition: all .5s;}
+#review li > article > a.moreReviews:hover{background: #ec3a60; color: #ffffff;}
+#review li > article > a.moreReviews:focus{background: #ec3a60; color: #ffffff;}
+#review ul li article h3{color: #111111; margin-bottom: 10px;}
+#review li article h3 span{display: block; color: #ec3a60; margin-bottom: 5px; font-weight: normal;}
+#review li article > span.reviewer{position: absolute; bottom: 15px; left: 20px;}
+#review li article > span{transition: all .4s;}
+#review li article > span.viewCount{position: absolute; bottom: 15px; right: 20px; color: #f27c84;}
+#review li:hover article > span{color: #ffffff;}
+#review li > a:focus > article > span{color: #ffffff;}
+#review ul li.moreReview article h3{font-size: 24px;}
+#review ul li.moreReview article h3:after{width: 40px; content:''; display: block; border-bottom: 1px solid #ec3a60; margin: 15px auto 0;}
+#review ul li.moreReview article h3 span{display: inline; color: #ec3a60; font-size: 30px; margin-right: 5px;}
+#review ul li.moreReview article p{margin: 15px auto 20px;}
+
+
+/* caution -------------------------------------*/
+section#caution{background: #212c4e; padding: 30px 0; overflow: hidden;}
+section#caution h2{width: 400px; float: left; color: #fe9814; font-size: 24px;}
+section#caution h2 span{font-weight: normal; font-size: 18px; color: #fe9814;}
+section#caution p{width: 500px; float: right; color: white;}
+
+
+/* interview ---------------------------------- */
+section#interviews div.inner{width: 1400px; padding: 60px 0; margin-bottom: 30px;}
+section#interviews div.inner h2{position: absolute; font-size: 30px; font-weight: normal;}
+section#interviews div.inner ul.tab{position: relative; height: 570px;}
+section#interviews div.inner ul.tab li{position: absolute; width: 480px;}
+section#interviews div.inner ul.tab li a{position: absolute; right: -900px; display: block; width: 640px; font-weight: normal; overflow: hidden;}
+section#interviews div.inner ul.tab li a h3{position: relative; width: 500px; height: auto; font-size: 13px; font-weight: normal; margin-left: 40px; background: #ffffff; transition: all .4s; padding-bottom: 14px; border-bottom: 1px solid #cccccc; overflow: hidden;}
+section#interviews div.inner ul.tab li.nth1 a{top: 40px; padding-top: 0;}
+section#interviews div.inner ul.tab li.nth2 a{top: 185px;}
+section#interviews div.inner ul.tab li.nth3 a{top: 330px;}
+section#interviews div.inner ul.tab li.nth4 a{top: 475px;}
+/* section#interviews div.inner ul.tab li.nth1{z-index:4;}
+section#interviews div.inner ul.tab li.nth2{z-index:3;}
+section#interviews div.inner ul.tab li.nth3{z-index:2;}
+section#interviews div.inner ul.tab li.nth4{z-index:1;} */
+section#interviews div.inner ul.tab li a h3:hover{margin-left: 0;}
+section#interviews div.inner ul.tab li h3 img{position: absolute; left: 0; display: block; width: 110px; height: 110px; margin-right: 30px; filter: grayscale(100%); -webkit-filter: grayscale(100%); transition: all .4s;}
+section#interviews div.inner ul.tab li a:hover h3 img{filter: grayscale(0%); -webkit-filter: grayscale(0%);}
+section#interviews div.inner ul.tab li a:focus h3 img{filter: grayscale(0%); -webkit-filter: grayscale(0%);}
+section#interviews div.inner ul.tab li a h3 span.txtWrap{display: block; width: 380px; float:right; color: #999999; padding: 10px 0;}
+section#interviews div.inner ul.tab li a:hover h3 span.txtWrap{color: #666666;}
+section#interviews div.inner ul.tab li a:focus h3 span.txtWrap{color: #666666;}
+section#interviews div.inner ul.tab li h3 span.interviewPlay{display: inline-block; width: 70px; height: 24px; border-radius: 12px; background: #aaaaaa; margin-left: 5px; text-align: center; color: #ffffff; line-height: 24px; margin-top: 10px; transition: all .4s;}
+section#interviews div.inner ul.tab li h3:hover span.interviewPlay{background: #e80f1e;}
+section#interviews div.inner ul.tab li h3:focus span.interviewPlay{background: #e80f1e;}
+section#interviews div.inner ul.tab li > div{width: 680px; height: auto; margin-top: 60px; background: #ffffff; /* opacity: 0; */ display:none; transition: all .4s;}
+section#interviews div.inner ul.tab li.first div{/* opacity: 1; */display: block;}
+section#interviews div.inner ul.tab li div img{width: 680px; height: 383px;}
+section#interviews div.inner ul.tab li div q{display: block; font-size: 14px; color: #666666; margin-top: 20px;}
+section#interviews div.inner ul.tab li div q em{font-size: 16px; font-weight: bold; color: #333333;}
+section#interviews div.inner ul.tab li div footer{margin-top: 22px;}
+/* 
+.mejs-poster img{display:none;}
+ */
+
+/* quick links --------*/
+section#quickLinks{height: 99px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd;}
+section#quickLinks ul{width: 100%; height: auto; overflow: hidden; float: left;}
+section#quickLinks ul li{width: 280px; height: auto; overflow: hidden; float: left;}
+section#quickLinks div h2{text-indent: -999px; width: 0px; height: 0px; overflow: hidden;}
+section#quickLinks ul li a{width: 279px; height: 108px; float: left; border-right: 1px solid #dddddd; display: block;}
+section#quickLinks ul li a.first{border-left: 1px solid #dddddd;}
+section#quickLinks ul li a{display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 24px 20px 24px 110px; background: url(../images/quicklink_icons.png) no-repeat left top; color: #999999; font-size: 13px;}
+section#quickLinks ul li a.first:hover{background-color: #ffecf4;}
+section#quickLinks ul li a.first:focus{background-color: #ffecf4;}
+section#quickLinks ul li a.nth2{background: url(../images/quicklink_icons.png) no-repeat left top -108px;}
+section#quickLinks ul li a.nth2:hover{background-color: #ffecf4;}
+section#quickLinks ul li a.nth2:focus{background-color: #ffecf4;}
+section#quickLinks ul li a.nth3{background: url(../images/quicklink_icons.png) no-repeat left top -216px;}
+section#quickLinks ul li a.nth3:hover{background-color: #ffecf4;}
+section#quickLinks ul li a.nth3:focus{background-color: #ffecf4;}
+section#quickLinks ul li a.nth4{background: url(../images/quicklink_icons.png) no-repeat left top -330px;}
+section#quickLinks ul li a.nth4:hover{background-color: #ffecf4;}
+section#quickLinks ul li a.nth4:focus{background-color: #ffecf4;}
+section#quickLinks ul li strong{margin-bottom: 5px; color: #222222;}
+
+
+/* curriculum --------- */
+section#curriculum{width: 100%; height: 800px; position: relative; background: #ffcccc;}
+section#curriculum > ul{width: 100%; height: 100%; transition: all .5s;}
+section#curriculum > ul.first{background: url(../images/bg_lec_info1.png) no-repeat bottom right; transition: all .5s;}
+section#curriculum > ul.last{background: url(../images/bg_lec_info2.png) no-repeat bottom left; }
+section#curriculum > ul > li{position: absolute; width: 100%; height: 100%;}
+section#curriculum > ul > li > div.achordion{width: 50%; height: 120px; position: absolute; top: 0; z-index: 2; cursor: pointer; transition: all .5s;}
+section#curriculum > ul > li#curriNth1 > div.achordion{left: 0; background: #ff4d4d;}
+section#curriculum > ul > li#curriNth2 > div.achordion{right: 0; background: #b30000;}
+section#curriculum > ul > li > div.achordion div{position: absolute; box-sizing: border-box; padding: 20px 40px; width: 700px; height: 100%; overflow: hidden; transition: all .5s;}
+section#curriculum > ul > li#curriNth1 > div.achordion div.leftWrap{right: 0;}
+section#curriculum > ul > li#curriNth1 > div.achordion div.rightWrap{left: 0;}
+section#curriculum > ul > li > div.achordion h2{color: #ffffff; font-size: 20px; margin-bottom: 10px; transition: all .5s;}
+section#curriculum > ul > li > div.achordion h2 span{color: #ffff99;}
+section#curriculum > ul > li > div.achordion p{color: #ffffff; font-size: 13px; transition: all .5s;}
+section#curriculum > ul > li > div.achordion p span{display: none;}
+
+/* 아코디언 하단 링크 */
+section#curriculum > ul > li > div.tabLeft div a,
+section#curriculum > ul > li > div.tabRight div a{display: block; width: 140px; height: 40px; position: absolute; bottom: -50px; left: 40px; border-radius: 20px; line-height: 40px; font-size: 16px; text-align: center; background: #555555; color: #ffffff; transition: all .5s;}
+section#curriculum > ul > li#curriNth1 > div.tabLeft div a.whiteBtn{left: 200px;}
+section#curriculum > ul > li > div.tabLeft div a.whiteBtn, 
+section#curriculum > ul > li > div.tabRight div a.whiteBtn{color: #ff0000; background: #ffffff;}
+
+
+/* 아코디언 열고 닫기 이미지 */
+section#curriculum > ul > li > div.tabLeft div > span,
+section#curriculum > ul > li > div.tabRight div > span{display: block; position: absolute; bottom: 46px; right: 40px; width: 40px; height: 40px; text-indent: -9999px; background: red; background: url(../images/achordion_btn_off.png) no-repeat center; background-size: 100%; transition: all .5s;}
+section#curriculum > ul > li#curriNth2 > div.tabRight div a.whiteBtn{color: #ff0000;}
+section#curriculum > ul > li div.tabLeftCont, 
+section#curriculum > ul > li div.tabRightCont{position: relative; width: 1400px; margin: 0 auto; display: none; height: 0; transition: all .5s;}
+
+
+/* li.on 활성화된 아코디언 메뉴 */
+section#curriculum > ul > li.on > div.achordion{height: 270px; position: absolute;}
+section#curriculum > ul > li.on > div.achordion h2{font-size: 30px; margin-bottom: 30px; transition: all .5s;}
+section#curriculum > ul > li.on > div.achordion h2 span{color: #eeee00;}
+section#curriculum > ul > li.on > div.achordion p span{display: inline;}
+section#curriculum > ul > li.on > div.achordion p{font-size: 14px;}
+section#curriculum > ul > li.on > div.achordion div{padding: 30px 40px;}
+section#curriculum > ul > li.on > div.achordion div a{bottom: 40px;}
+section#curriculum > ul > li.on > div.achordion div > span{background: url(../images/achordion_btn_on.png) no-repeat center; background-size: 100%;}
+
+
+/* 메뉴 하위 컨텐츠 */
+section#curriculum > ul > li.on > div#subNth2,
+section#curriculum > ul > li.on > div#subNth4{z-index: 1; opacity: 1; display: block; height: 800px;}
+section#curriculum > ul > li > div#subNth2 ul,
+section#curriculum > ul > li > div#subNth4 ul{width: 1400px; position: absolute; bottom: 100px; left: 80px;}
+section#curriculum > ul > li > div#subNth2 ul li,
+section#curriculum > ul > li > div#subNth4 ul li{float: left; margin-right: 30px;}
+section#curriculum > ul > li > div#subNth2 ul li.nth5,
+section#curriculum > ul > li > div#subNth4 ul li.nth5{margin-right: 0px;}
+section#curriculum > ul > li > div#subNth2 ul li button, 
+section#curriculum > ul > li > div#subNth4 ul li button{width: 180px; height: 275px; background: #ffffff; color: #999999; border: 1px solid #ffffff; box-sizing: border-box; transition: all .3s;}
+section#curriculum > ul > li > div#subNth2 ul li button:hover,
+section#curriculum > ul > li > div#subNth4 ul li button:hover{border: 1px solid #ff7373;}
+section#curriculum > ul > li > div#subNth2 ul li button:focus,
+section#curriculum > ul > li > div#subNth4 ul li button:focus{border: 1px solid #ff7373;}
+section#curriculum > ul > li > div#subNth2 ul li button em, 
+section#curriculum > ul > li > div#subNth4 ul li button em{display: block; color: #111111; font-size: 16px; margin: 5px 0; }
+section#curriculum > ul > li > div.tabRightCont table{position: absolute; bottom: 50px; left: 80px; background: white; padding: 10px; border-radius: 30px; border-spacing: 15px 10px;}
+section#curriculum > ul > li > div.tabRightCont table caption{visibility: hidden;}
+section#curriculum > ul > li > div.tabRightCont table th, td{width: 220px; height: 50px; position: relative; background: #f8f8f8; border: 1px solid #e9e9e9; text-align: center; box-sizing: border-box;}
+section#curriculum > ul > li > div.tabRightCont table span.next{width: 7px; height: 13px; display: inline-block; position: absolute; top: 18px; right: -12px; text-indent: -9999px; background: url(../images/cur_arr1.png) no-repeat center;}
+section#curriculum > ul > li > div.tabRightCont table tr td.nth3 span.next{background: url(../images/cur_arr2.png) no-repeat center;}
+section#curriculum > ul > li > div.tabRightCont table tr td.dashed{border: 1px dashed #111111;}
+section#curriculum > ul > li > div.tabRightCont table thead tr td:first-child{width: 180px;}
+section#curriculum > ul > li > div.tabRightCont table td.none{visibility: hidden;}
+section#curriculum > ul > li > div.tabRightCont table tr td span.color{color: #2f62cb;}
+section#curriculum > ul > li > div.tabRightCont table thead tr th{color: #ffffff;}
+section#curriculum > ul > li > div.tabRightCont table thead tr th.nth1{background: #ffcccc; border-color: #ff8d8d;}
+section#curriculum > ul > li > div.tabRightCont table thead tr th.nth2{background: #ff4d4d; border-color: #ff2626;}
+section#curriculum > ul > li > div.tabRightCont table thead tr th.nth3{background: #ff2626; border-color: #ff0000;}
+section#curriculum > ul > li > div.tabRightCont table thead tr th.nth4{background: #b30000; border-color: #ff0000;}
+section#curriculum > ul > li > div.tabRightCont table tbody tr th{background: #efefef;}
+
+
+/* product slide ----------------------*/
+section#productsSlide div.inner{padding: 60px 0;}
+section#productsSlide h2{text-align: center; padding-bottom: 30px;}
+section#productsSlide div.frame{width: 1200px; height:270px; position: relative; margin: 0 auto; overflow: hidden;}
+section#productsSlide div.frame ul{width: 1400px; height: 100%; position: absolute;}
+section#productsSlide div.frame ul li{width: 180px; height: 270px; margin-right: 20px; float: left; overflow: hidden;}
+section#productsSlide div.frame ul li a{display: block; width: 180px; height: 270px; position: relative; box-sizing: border-box; padding: 190px 15px 15px 15px; border: 1px solid #dddddd; text-align: right;}
+section#productsSlide div.frame ul li a.prod01{background: url(../images/prod_01.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod02{background: url(../images/prod_02.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod03{background: url(../images/prod_03.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod04{background: url(../images/prod_04.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod05{background: url(../images/prod_05.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod06{background: url(../images/prod_06.png) no-repeat left top;}
+section#productsSlide div.frame ul li a.prod07{background: url(../images/prod_07.png) no-repeat left top;}
+section#productsSlide div.frame ul li a > span{position: absolute; top: 0; left: 0; padding: 10px; color: #ffffff;}
+section#productsSlide div.frame ul li a > span.hot{background: red;}
+section#productsSlide div.frame ul li a > span.best{background: #2f62cb;}
+section#productsSlide div.frame ul li a dt{color: #111111; font-weight: bold; text-align: left; margin-bottom: 2px;}
+section#productsSlide div.frame ul li a dd{color: #111111;}
+section#productsSlide div.frame ul li a dd strong{font-size: 18px;}
+section#productsSlide div.frame ul li a dd del{color: #999999; font-size: 13px;}
+section#productsSlide div.frame ul li a dd span.red{display: block; position: absolute; bottom: 15px; left: 15px; color: red;}
+/* section#productsSlide div.frame ul li a.prod01 dd{position: absolute; bottom: 16px; right: 15px;} */
+section#productsSlide div.frame ul li a.prod03 dd{position: absolute; bottom: 16px; right: 15px;}
+section#productsSlide div.frame ul li a.prod04 dd{position: absolute; bottom: 16px; right: 15px;}
+/* section#productsSlide div.frame ul li a.prod05 dd{position: absolute; bottom: 16px; right: 15px;} */
+section#productsSlide div.frame ul li a.prod07 dd{position: absolute; bottom: 16px; right: 15px;}
+
+
+/* 프로덕스 슬라이드 플러그인 컨트롤 버튼 */
+div#controls a{display: block; position: absolute; top: 50%; font-size: 30px; color: red;}
+div#controls a.nextBtn{right: 0; display: block; height: 51px; position: absolute; text-indent: -99999px; width: 26px; background: url(../images/slide_nav_st1.png) no-repeat right center;}
+div#controls a.prevBtn{left: 0; display: block; height: 51px; position: absolute; text-indent: -99999px; width: 26px; background: url(../images/slide_nav_st1.png) no-repeat left center;}
+
+
+/* awards */
+section#awards {height: auto; background: url(../images/award_bg.jpg) no-repeat center top; background-size: cover;}
+section#awards div.inner{padding: 60px 0;}
+section#awards h2{text-align: center; padding-bottom: 30px; font-weight: 100; color: #ffffff;}
+section#awards h2 span.nth1{color: #ff2626; font-weight: bold;}
+section#awards h2 span.nth2{color: #a5a5a5; font-weight: 100;}
+section#awards div.frame{width: 1200px; height: 230px; margin: 0 auto; position: relative; overflow: hidden;}
+section#awards ul{width: 1400px; height: 100%; position: absolute; top: 30px;}
+section#awards li{width: 130px; height: 240px; margin-right: 40px; float: left;}
+/* section#awards li p{width: 100%; padding-top: 140px; text-align: center; background: url(../images/award_nba2012.png) no-repeat center top; color: #dddddd;} */
+section#awards li p.award1{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal01.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award2{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal02.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award3{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal03.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award4{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal04.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award5{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal05.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award6{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal06.png) no-repeat center top; color: #dddddd;}
+section#awards li p.award7{width: 100%; padding-top: 80px; text-align: center; background: url(../images/award_medal07.png) no-repeat center top; color: #dddddd;}
+section#awards li p strong{display: block; margin-bottom: 10px;}
+
+/* awards 슬라이드 플러그인 컨트롤 버튼 */
+div#controls2 a{display: block; position: absolute; top: 50%; font-size: 30px; color: red;}
+div#controls2 a.nextBtn2{right: 0; display: block; height: 51px; position: absolute; text-indent: -99999px; width: 26px; background: url(../images/slide_nav_st1.png) no-repeat right center;}
+div#controls2 a.prevBtn2{left: 0; display: block; height: 51px; position: absolute; text-indent: -99999px; width: 26px; background: url(../images/slide_nav_st1.png) no-repeat left center;}
+
+/* customer sevice --------------------*/
+section#CS h2{text-indent: 9999px; display: none;}
+section#CS div.inner{height: 350px; padding: 60px 0;}
+
+
+/* section#CS div.inner::after {content: ""; display: block; overflow: hidden; } */
+.cf{content:''; display: block; overflow: hidden;}
+section#CS div.inner > div{position: relative; height: 350px; float: left;}
+
+
+/* 컬럼 1,2,3 */
+section#CS div.inner > div.nth1{width: 320px; padding-right: 15px;}
+section#CS div.inner > div.nth2{width: 300px; padding: 0 30px; border-left: 1px solid #dddddd; border-right: 1px solid #dddddd;}
+section#CS div.inner > div.nth3{width: 316px; padding: 0 30px; border-left: 1px solid #dddddd; border-right: 1px solid #dddddd;}
+section#CS div.inner > div.nth4{width: 289px; padding-left: 30px;}
+
+
+/* heading 3 */
+section#CS h3{font-size: 20px; font-weight: normal; margin-bottom: 20px;}
+section#CS h3 span{color: #ff4c4d;}
+
+
+/* 왼쪽 컬럼 */
+section#CS div.inner > div.nth1 article{width: 320px; position: absolute;}
+section#CS div.inner > div.nth1 article.nth1{padding-bottom: 30px; top: 0;}
+section#CS div.inner > div.nth1 article.nth2{padding-top: 30px; border-top: 1px dotted #dddddd; bottom: 0;}
+section#CS div.inner > div.nth1 article.nth1 li{width: 300px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; line-height: 25px;}
+section#CS div.inner > div.nth1 article.nth1 li a{color: #333333;}
+section#CS div.inner > div.nth1 article.nth1 li a:hover{text-decoration:underline;}
+section#CS div.inner > div.nth1 article.nth2 a{display: inline-block; width: 150px; height: 50px; text-indent: -99999px; background: url(../images/img_appstore.png) no-repeat left top;}
+section#CS div.inner > div.nth1 article.nth2 a.nth1{margin-right: 10px;}
+section#CS div.inner > div.nth1 article.nth2 a.nth2{background: url(../images/img_googlestore.png) no-repeat left top;}
+
+
+
+/* sns 중간1 컬럼 */
+section#CS div.inner > div.nth2 article iframe{overflow:hidden; overflow-y: scroll;}
+section#CS div.inner > div.nth2 ul.socialMedia{position: absolute; top: 0; right: 30px;}
+section#CS div.inner > div.nth2 ul.socialMedia li{float: left; margin-left: 10px;}
+section#CS div.inner > div.nth2 ul.socialMedia li a{display: block; width: 30px; height: 30px; text-indent: -99999px; background: url(../images/img_sns.jpg) no-repeat left; transition: all .3s;}
+section#CS div.inner > div.nth2 ul.socialMedia li:nth-child(2) a{background: url(../images/img_sns.jpg) no-repeat left -35px top;}
+section#CS div.inner > div.nth2 ul.socialMedia li:nth-child(3) a{background: url(../images/img_sns.jpg) no-repeat left -70px top;}
+
+/* cs 중간2 컬럼 */
+section#CS div.inner > div.nth3 ul li img{margin-bottom: 7px;}
+section#CS div.inner > div.nth3 ul li p{margin-bottom: 19px;}
+section#CS div.inner > div.nth3 ul li span{color: #999999; font-size: 13.5px;}
+
+/* sns 버튼 호버시 */
+section#CS div.inner > div.nth2 ul.socialMedia li a:hover{background: url(../images/img_sns_on.jpg) no-repeat left;}
+section#CS div.inner > div.nth2 ul.socialMedia li.nth2 a:hover{background: url(../images/img_sns_on.jpg) no-repeat left -35px top;}
+section#CS div.inner > div.nth2 ul.socialMedia li.nth3 a:hover{background: url(../images/img_sns_on.jpg) no-repeat left -70px top;}
+section#CS iframe{position: absolute; bottom: 0; left: 50%; width: 320px; height: 300px; margin-left: -160px; border: none; overflow: hidden;}
+
+
+/* cs 오른쪽 컬럼 */
+section#CS div.inner > div.nth4 article > p{font-size: 42px; font-weight: bold; margin-bottom: 20px; line-height: 42px;}
+section#CS div.inner > div.nth4 article ul{width: 289px; height: 80px; position: relative;}
+section#CS div.inner > div.nth4 article ul li{width: 128px; float: left; line-height: 20px;}
+section#CS div.inner > div.nth4 article ul li.nth1{margin-right: 30px;}
+section#CS div.inner > div.nth4 article ul li h4{height: 22px; background: #555555; color: #ffffff; font-size: 13px; font-weight: normal; text-align:center; line-height: 22px; border-radius: 11px; margin-bottom: 10px;}
+section#CS div.inner > div.nth4 article div > p{color: #999999; margin-bottom: 30px;}
+section#CS div.inner > div.nth4 article div > a{display: inline-block; width: 81px; height: 113px; box-sizing: border-box; padding-top: 90px; margin-left: 15px; text-align: center; color: #111111;}
+section#CS div.inner > div.nth4 article div a.nth1{margin: 0; background-image: url(../images/img_cs.png); background-repeat: no-repeat; background-position: center top;}
+section#CS div.inner > div.nth4 article div a.nth2{background: url(../images/img_faq.png) no-repeat center top;}
+section#CS div.inner > div.nth4 article div a.nth3{background: url(../images/img_qna.png) no-repeat center top;}
+
+
+/*===================================
+    footer
+=====================================*/
+footer{background-color: #333333;}
+footer div#footerMenu{position: relative; background: #333333; width: 100%; height: 50px; box-sizing: border-box;}
+footer div#footerMenu div.background{position: absolute; width: 60%; height: 100%; top: 0; left: -10%; background: #555555; margin-right: 50%; transform: skewX(-20deg); text-indent: -99999px;}
+footer div#footerMenu div.inner > ul li{display: block; float: left; padding-top: 16px;}
+footer div#footerMenu div.inner {position: relative; top: 0; left: 0;}
+footer div#footerMenu div.inner > ul {position: absolute; top: 0; left: 0;}
+footer div#footerMenu div.inner > ul li a{color: #cccccc; padding: 0 15px 0 10px; border-right: 1px solid #dddddd; transition: all .3s;}
+footer div#footerMenu div.inner > ul li.red a{color: #fd535d;}
+footer div#footerMenu div.inner > ul li.last a{border: none;}
+footer div#footerMenu div.inner > ul li a:hover{color: #ffffff;}
+footer div#footerMenu div.inner > ul li.first-child a{padding-left: 0;}
+footer div#footerMenu div.inner > div{position: absolute; top: 0; right: 0;}
+footer div#footerMenu div.inner > div p{font-size: 16px; display: inline-block; vertical-align: top; margin-right: 50px; color: #ffffff; padding-top: 14px;}
+footer div#footerMenu div.inner div.familySiteLink{display: inline-block; position: relative; width: 160px; height: 28px; border: 1px solid #ffffff; margin-top: 10px; overflow: hidden; z-index: 1;}
+footer div#footerMenu div.inner div.familySiteLink ul{width: 160px; height: 200px; background: #000000; color: white; line-height: 28px; text-indent: 15px; cursor: pointer; opacity: .9;}
+footer div#footerMenu div.inner div.familySiteLink ul:hover{color: #ffa000;}
+footer div#footerMenu div.inner div.familySiteLink ul li{width: 160px; height: 28px;}
+footer div#footerMenu div.inner div.familySiteLink ul li a{display: block; width: 160px; height: 28px; box-sizing: border-box; color: #ffffff; line-height: 28px; transition: all .3s;}
+footer div#footerMenu div.inner div.familySiteLink ul li a:hover{background: #ffffff; color: #2c4ebc;}
+footer div#footerMenu div.inner div.familySiteLink ul span{display: block; width: 13px; height: 13px; position: absolute; top: 8px; right: 15px; text-indent: -99999px; background: url(../images/familysite_arrow.png) no-repeat center center; transition: all .3s; cursor: pointer;}
+footer div#footerMenu div.inner div.familySiteLink ul span:hover{background: url(../images/familysite_arrow_hover.png) no-repeat center center;}
+
+
+/* 열기 버튼 눌렀을 시 div.on */
+footer div#footerMenu div.inner div.on{overflow: visible;}
+footer div#footerMenu div.inner div.on ul span{background: url(../images/familysite_arrow_on.png) no-repeat center center; transition: all .3s;}
+footer div#footerMenu div.inner div.on ul span:hover{background: url(../images/familysite_arrow_hover_on.png) no-repeat center center;}
+
+
+/* copyright */
+div#copyright{box-sizing: border-box; padding: 30px 0 30px 300px;}
+div#copyright > img{position: absolute; top: 30px; left: 30px;}
+div#copyright p{font-size: 12px; margin-bottom: 10px; color: #797979;}
+div#copyright p.contact{color: #797979;}
+div#copyright a{color: #797979;}
+div#copyright li{display: inline-block; margin-right: 15px;}
+.award{position: absolute; top: 30px; right: 30px;}
+
+#topBtn{position: fixed; bottom: 10px; right: 10px;}
+
+
+
+
+
+
+
+
+
+
+

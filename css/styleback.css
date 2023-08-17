@@ -1,0 +1,331 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+/* 전체 레이아웃 */
+
+body,ul,li {margin: 0; padding: 0; font-size: 12px; font-family: "맑은 고딕", sans-serif;}
+a {text-decoration: none; color: #ffffff;}
+ul {list-style: none;}
+
+#wrap {position: relative; margin: 0 auto; width: 100%; min-width:1000px; background: url(../img/main_bg1.png) no-repeat;}
+#header {width: 1400px; height: 70px; position: fixed; left: 50%; margin-left: -690px; top: 35px; z-index: 1000;}
+#contents{width: 1400px; margin: 0 auto;}
+#main {width: 1400px; height: 950px; position: relative;}
+#profile {width: 1400px; height: 1000px; position: relative;}
+#mobile {width: 1400px; height: 1000px; position: relative;}
+#adaptive01 {width: 1400px; height: 1000px; position: relative;}
+#jQuery {width: 1400px; height: 1000px; position: relative;}
+#css {width: 1400px; height: 1000px; position: relative;}
+#shopping {width: 1400px; height: 1000px; position: relative;}
+#graphic {width: 1400px; height: 1000px; position: relative;}
+#epilogue {width: 1400px; height: 1000px; position: relative;}
+#main > *, #profile > *, #mobile > *, #adaptive01 > *, #jQuery > *, #css > *, #shopping > *, #graphic > *, #epilogue > * {position: absolute;}
+
+/* 퀵메뉴 스타일 정의 */
+
+#floatdiv {position: absolute; left: 90%; top: 250px; margin-left: 10px;}
+#floatdiv ul {list-style: none; border: 0; margin: 0; padding: 0;}
+#floatdiv ul li {list-style: none; border: 0; margin: 0; padding: 0;}
+/* #floatdiv ul li img {display: inline; list-style: none; float: left; border: 0; margin: 0 0 5px 0; padding: 0; clear: both; cursor: pointer;} */
+#floatdiv ul li span{margin: 0 0 5px 0; cursor: pointer;}
+#floatdiv ul li #btn01{display: block; width: 40px; height: 40px; background: url(../img/button/before/be01.png) no-repeat;}
+#floatdiv ul li #btn02{display: block; width: 40px; height: 40px; background: url(../img/button/before/be02.png) no-repeat;}
+#floatdiv ul li #btn03{display: block; width: 40px; height: 40px; background: url(../img/button/before/be03.png) no-repeat;}
+#floatdiv ul li #btn04{display: block; width: 40px; height: 40px; background: url(../img/button/before/be04.png) no-repeat;}
+#floatdiv ul li #btn05{display: block; width: 40px; height: 40px; background: url(../img/button/before/be05.png) no-repeat;}
+#floatdiv ul li #btn06{display: block; width: 40px; height: 40px; background: url(../img/button/before/be06.png) no-repeat;}
+#floatdiv ul li #btn07{display: block; width: 40px; height: 40px; background: url(../img/button/before/be07.png) no-repeat;}
+#floatdiv ul li #btn08{display: block; width: 40px; height: 40px; background: url(../img/button/before/be08.png) no-repeat;}
+#floatdiv ul li #btn09{display: block; width: 40px; height: 40px; background: url(../img/button/before/be09.png) no-repeat;}
+
+#floatdiv ul li:hover #btn01{background: url(../img/button/after/af01.png) no-repeat;}
+#floatdiv ul li:hover #btn02{background: url(../img/button/after/af02.png) no-repeat;}
+#floatdiv ul li:hover #btn03{background: url(../img/button/after/af03.png) no-repeat;}
+#floatdiv ul li:hover #btn04{background: url(../img/button/after/af04.png) no-repeat;}
+#floatdiv ul li:hover #btn05{background: url(../img/button/after/af05.png) no-repeat;}
+#floatdiv ul li:hover #btn06{background: url(../img/button/after/af06.png) no-repeat;}
+#floatdiv ul li:hover #btn07{background: url(../img/button/after/af07.png) no-repeat;}
+#floatdiv ul li:hover #btn08{background: url(../img/button/after/af08.png) no-repeat;}
+#floatdiv ul li:hover #btn09{background: url(../img/button/after/af09.png) no-repeat;}
+
+#floatdiv ul li.active #btn01{background: url(../img/button/after/af01.png) no-repeat;}
+#floatdiv ul li.active #btn02{background: url(../img/button/after/af02.png) no-repeat;}
+#floatdiv ul li.active #btn03{background: url(../img/button/after/af03.png) no-repeat;}
+#floatdiv ul li.active #btn04{background: url(../img/button/after/af04.png) no-repeat;}
+#floatdiv ul li.active #btn05{background: url(../img/button/after/af05.png) no-repeat;}
+#floatdiv ul li.active #btn06{background: url(../img/button/after/af06.png) no-repeat;}
+#floatdiv ul li.active #btn07{background: url(../img/button/after/af07.png) no-repeat;}
+#floatdiv ul li.active #btn08{background: url(../img/button/after/af08.png) no-repeat;}
+#floatdiv ul li.active #btn09{background: url(../img/button/after/af09.png) no-repeat;}
+
+.cf:after {content: ""; display: block; clear: both;}
+
+/* 상단 풀다운 메뉴 스타일 */
+
+
+#menuWrap {width: 1380px; height: 50px; position:relative; left: 0px; top: 10px; background: #e3ecf7; opacity: 0.85; border-radius: 10px;}
+#menuWrap .click_me{display: inline-block; position: absolute; top: 12px; left: 1226px;}
+#menuWrap .fav{position: absolute; top: 1px; right: 20px; display: block; padding: 0 4px; font-weight: bold; /* background-color: #ffffff; color: #26376f; border-radius: 2px; */}
+#menu {position: absolute; left: 0px; top: 0px; width: 1400px;}
+#menu li {float: left; padding: 0px 45px;}
+#menu .mLogo {padding-left: 40px; margin-top: -15px;}
+#menu li a {display: block; padding: 2px 4px; line-height: 42px; font-size: 1.5em; font-weight: bold; text-align: center; color: #7eabd3; opacity: 1;}
+#menu li a:hover {color: #2b5db9;}
+#menu .on a{color: #2b5db9; text-shadow: 0 0 20px #ffffff;}
+#menu .mLogo a {padding: 0px 4px; opacity: 1;}
+
+/* main */
+
+#main .pLogo{left: 120px; top: 300px;}
+#main .me {left: 700px; top: 110px;}
+
+/* profile */
+
+#profile > img {left: 3.5%; top: 15%;}
+#profile .profile01 {left: 6%; top: 38%; width: 210px;}
+#profile .profile02 {left: 28%; top: 38%; width: 290px;}
+#profile .profile03 {left: 58%; top: 38%; width: 130px;}
+#profile .profile04 {left: 77%; top: 38%; width: 210px;}
+#profile strong {display: block; margin-top: 20px; text-align: center; font-size: 2.8em; color: #26376f;}
+#profile strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#profile strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#profile strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#profile strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#profile strong::selection{background-color: #dddddd; color: #ff0000;}
+#profile ul {margin: 20px 0px 0px 20px;}
+#profile ul li {list-style: square; font-size: 1.3em; line-height: 170%; color: #222222;}
+/* #profile .profile02 ul li {line-height: 200%;} */
+#profile ul li::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#profile ul li::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#profile ul li::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#profile ul li::-o-selection{background-color: #dddddd; color: #ff0000;}
+#profile ul li::selection{background-color: #dddddd; color: #ff0000;}
+#profile .profile01 img {display: block; margin: 0px auto;}
+#profile .profile02 img {display: block; margin: 0px auto;}
+#profile .profile03 img {display: block; margin: 0px auto;}
+#profile .profile04 img {display: block; margin: 0px auto;}
+
+/* mobile */
+
+#mobile > img {left: 3.5%; top: 15%;}
+#mobile .mobile01 {left: 4%; top: 23%;}
+#mobile .mobile02 {left: 4%; top: 36%;}
+#mobile .mobile03 {left: 4%; top: 49%;}
+#mobile .mobile04 {left: 4%; top: 62%;}
+#mobile .mobileMainImg {left: 47.5%; top: 24%;}
+#mobile .mobileSubImg {left: 4.2%; top: 76%;}
+#mobile .mobileSubImg img{margin-right: 20px;}
+#mobile span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#mobile span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#mobile span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#mobile span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#mobile span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#mobile span::selection{background-color: #dddddd; color: #ff0000;}
+#mobile strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#mobile strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#mobile strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#mobile strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#mobile strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#mobile strong::selection{background-color: #dddddd; color: #ff0000;}
+#mobile p {width: 500px; margin-top: 5px; color: #222222; line-height: 1.5em; text-align: justify;}
+#mobile p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#mobile p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#mobile p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#mobile p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#mobile p::selection{background-color: #dddddd; color: #ff0000;}
+#mobile p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* adaptive01 */
+
+#adaptive01 > img {left: 3.5%; top: 15%;}
+#adaptive01 .adaptive01 {left: 4%; top: 23%;}
+#adaptive01 .adaptive02 {left: 4%; top: 36%;}
+#adaptive01 .adaptive03 {left: 4%; top: 49%;}
+#adaptive01 .adaptive04 {left: 4%; top: 62%;}
+#adaptive01 .adaptiveMainImg {left: 47.5%; top: 22%;}
+#adaptive01 span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#adaptive01 span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 span::selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#adaptive01 strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 strong::selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p {width: 500px; margin-top: 5px; color: #222222; line-height: 1.5em; text-align: justify;}
+#adaptive01 p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p::selection{background-color: #dddddd; color: #ff0000;}
+#adaptive01 p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* jQuery */
+
+#jQuery > img {left: 3.5%; top: 15%;}
+#jQuery .jQuery01 {left: 4%; top: 23%;}
+#jQuery .jQuery02 {left: 4%; top: 36%;}
+#jQuery .jQuery03 {left: 4%; top: 49%;}
+#jQuery .jQuery04 {left: 4%; top: 62%;}
+#jQuery .jQueryMainImg {left: 47.5%; top: 24%;}
+#jQuery .jQuerySubImg {left: 4.2%; top: 76%;}
+#jQuery .jQuerySubImg img{margin-right: 20px;}
+#jQuery span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#jQuery span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery span::selection{background-color: #dddddd; color: #ff0000;}
+#jQuery strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#jQuery strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery strong::selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p {width: 500px; margin-top: 5px; color: #222222; line-height: 1.5em; text-align: justify;}
+#jQuery p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p::selection{background-color: #dddddd; color: #ff0000;}
+#jQuery p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* css */
+
+#css > img {left: 3.5%; top: 15%;}
+#css .css01 {left: 4%; top: 23%;}
+#css .css02 {left: 4%; top: 36%;}
+#css .css03 {left: 4%; top: 49%;}
+#css .css04 {left: 4%; top: 62%;}
+#css .cssMainImg {left: 47.5%; top: 24%;}
+#css .cssSubImg {left: 4.2%; top: 76%;}
+#css .cssSubImg img{margin-right: 20px;}
+#css span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#css span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#css span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#css span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#css span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#css span::selection{background-color: #dddddd; color: #ff0000;}
+#css strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#css strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#css strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#css strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#css strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#css strong::selection{background-color: #dddddd; color: #ff0000;}
+#css p {width: 500px; margin-top: 5px; color: #222222; line-height: 1.5em; text-align: justify;}
+#css p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#css p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#css p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#css p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#css p::selection{background-color: #dddddd; color: #ff0000;}
+#css p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* shopping */
+
+#shopping > img {left: 3.5%; top: 15%;}
+#shopping .shop01 {left: 4%; top: 23%;}
+#shopping .shop02 {left: 4%; top: 36%;}
+#shopping .shop03 {left: 4%; top: 49%;}
+#shopping .shop04 {left: 4%; top: 62%;}
+#shopping .shopMainImg {left: 47.5%; top: 22%; width: 580px; height: 550px; overflow: hidden; overflow-y: scroll;}
+#shopping .shopMobileImg {left: 72%; top: 43%;}
+#shopping .iphoneImg {left: 73%; top: 48.7%; width: 152px; height: 228px; overflow: hidden; overflow-y: scroll;}
+#shopping span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#shopping span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#shopping span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#shopping span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#shopping span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#shopping span::selection{background-color: #dddddd; color: #ff0000;}
+#shopping strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#shopping strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#shopping strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#shopping strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#shopping strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#shopping strong::selection{background-color: #dddddd; color: #ff0000;}
+#shopping p {width: 500px; margin-top: 5px; color: #222222; line-height: 1.5em; text-align: justify;}
+#shopping p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#shopping p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#shopping p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#shopping p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#shopping p::selection{background-color: #dddddd; color: #ff0000;}
+#shopping p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* 2d graphic */
+
+#graphic > img {left: 3.5%; top: 15%;}
+#graphic .graphic01 {left: 4%; top: 23%;}
+#graphic .graphic02 {left: 4%; top: 49%;}
+#graphic .graphicImgBox {left: 47.5%; top: 21%; width: 580px; height: 610px;}
+#graphic #graphicImage {width: 580px; height: 500px;}
+#graphic #graphicImage p {display: none;}
+#graphic #graphicImage p img {width: 580px; height: 500px; border: 0;}
+#graphic #graphicBox {position: relative; width: 580px; height: 90px; margin-top: 10px;}
+#graphic #graphicBox .left {position: absolute; left: 0; top: 0; width: 35px; height: 40px; padding-top: 25px; text-align: left; cursor: pointer;}
+#graphic #graphicBox .right {position: absolute; right: 0; top: 0; width: 35px; height: 40px; padding-top: 25px; text-align: right; cursor: pointer;}
+#graphic #graphicBox .graphicImg {overflow: hidden; position: relative; left: 35px; width: 510px; height: 90px;}
+#graphic #graphicBox .graphicImg ul {position: absolute; width: 1530px; left: -510px;}
+#graphic #graphicBox .graphicImg .thumb {float: left; width: 120px; height: 90px; margin-left: 10px; list-style: none; cursor: pointer;}
+#graphic #graphicBox .graphicImg .first {margin-left: 0;}
+#graphic span {font-size: 2em; color: #0036d9; font-family: 'Nanum Pen Script', cursive;}
+#graphic span::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#graphic span::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#graphic span::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#graphic span::-o-selection{background-color: #dddddd; color: #ff0000;}
+#graphic span::selection{background-color: #dddddd; color: #ff0000;}
+#graphic strong {font-size: 2em; color: #26376f; padding: 0px 10px 0px 0px;}
+#graphic strong::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#graphic strong::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#graphic strong::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#graphic strong::-o-selection{background-color: #dddddd; color: #ff0000;}
+#graphic strong::selection{background-color: #dddddd; color: #ff0000;}
+#graphic p {width: 500px; margin-top: 15px; color: #222222; line-height: 1.5em; text-align: justify;}
+#graphic p::-moz-selection{background-color: #dddddd; color: #ff0000;}
+#graphic p::-webkit-selection{background-color: #dddddd; color: #ff0000;}
+#graphic p::-ms-selection{background-color: #dddddd; color: #ff0000;}
+#graphic p::-o-selection{background-color: #dddddd; color: #ff0000;}
+#graphic p::selection{background-color: #dddddd; color: #ff0000;}
+#graphic p .point {color: #1184e8; font-weight: bold; font-size: 1em; font-family: "맑은 고딕", sans-serif;}
+
+/* epilogue */
+
+#epilogue > img {left: 3.5%; top: 15%;}
+#epilogue .epilogueBox {left: 3.5%; top: 24%; width: 93%; height: 60%; background-color: #dedede; overflow: hidden;}
+#epilogue .epilogueBox .epilogueText01 {position: absolute; left: 3%; top: 5%; width: 30%; height: 90%;}
+#epilogue .epilogueBox .epilogueText01 > span{margin-top: 20px; display: block; font-size: 1.6em; font-weight: bold; color: #666666;}
+#epilogue .epilogueBox .epilogueText01 span::-moz-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 span::-webkit-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 span::-ms-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 span::-o-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 span::selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 p{margin-top: 30px; font-size: 1.2em; text-align: justify; color: #555555; line-height: 1.3;}
+#epilogue .epilogueBox .epilogueText01 p::-moz-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 p::-webkit-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 p::-ms-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 p::-o-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText01 p::selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 {position: absolute; left: 36%; top: 5%; width: 30%; height: 90%;}
+#epilogue .epilogueBox .epilogueText02 > span{margin-top: 20px; display: block; font-size: 1.6em; font-weight: bold; color: #666666;}
+#epilogue .epilogueBox .epilogueText02 > span::-moz-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 > span::-webkit-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 > span::-ms-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 > span::-o-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 > span::selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 p{margin-top: 30px; font-size: 1.2em; text-align: justify; color: #555555; line-height: 1.3;}
+#epilogue .epilogueBox .epilogueText02 p::-moz-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 p::-webkit-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 p::-ms-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 p::-o-selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueText02 p::selection{color: #ff0000;}
+#epilogue .epilogueBox .epilogueImg01 {position: absolute; left: 72%; top: -7%;}
+#epilogue .epilogueBox .epilogueText02 p span {font-weight: bold; text-decoration: underline;}
+#epilogue .epilogueBox .epilogueImg01 img {-webkit-transform: rotate(10deg); -moz-transform: rotate(10deg); -ms-transform: rotate(10deg); -o-transform: rotate(10deg); transform: rotate(10deg);}
+#epilogue .epilogueBox .epilogueImg02 {position: absolute; left: 70%; top: 35%;}
+#epilogue .epilogueBox .epilogueImg02 img {-webkit-transform: rotate(353deg); -moz-transform: rotate(353deg); -ms-transform: rotate(353deg); -o-transform: rotate(353deg); transform: rotate(353deg);}
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* 기본 글꼴 및 링크 텍스트 꾸미기 */
+body{font-size: 12px; font-family: 'Noto Sans KR', sans-serif; color: #333333; background-color: #eeeeee; /* min-width: 1600px; */ /* overflow-x:hidden; */}
+a{color: #333333; text-decoration: none;}
+.fl{float:left;}
+.fr{float:right;}
+.cf:after{
+	content: ' ';
+	display: block;
+	clear:both;}
+.hide, legend, caption, hr{position: absolute; left: -9999px; width: 0; height: 0; overflow: hidden; text-indent: -9999px;}
+
+.ellipsis {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+h2{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+p{overflow: hidden;}
+li{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+
+.clear { clear:both; }
+
+.linespace_10 {
+	height:10px;
+}
+

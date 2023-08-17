@@ -1,0 +1,14 @@
+﻿*{margin: 0; padding: 0;}
+html{overflow-y: scroll;}
+ul, li{list-style: none;}
+a{text-decoration: none;}
+body{font-family: '맑은 고딕','Malgun Gothic', sans-serif; /* background:  url(../images/phmain.png) no-repeat center top; */ /* letter-spacing: -0.1em; */}
+img{border: 0;  vertical-align: top;}
+h1{text-indent:-99999px; margin-top: -50px;}
+
+.fl{float: left;}
+.fr{float: right;}
+.cb{clear: both;}
+.cl{clear: left;}
+.cr{clear: right;}
+.cf:after{content: ''; display: block; clear: both;}

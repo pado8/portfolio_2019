@@ -1,0 +1,86 @@
+﻿#wrap{width: 100%; margin: 0 auto; position:relative}
+#topHeader{width: 100%; height:209px; margin: 0 auto 30px;}
+#mainVisual{width: 1400px; height:2050px; margin: 0 auto;}
+	#mainLeft{float: left; width: 270px; height:800px;  margin-right: 30px;}
+	#mainRight{float: left; width: 1100px; height:1900px;}
+		#calendarWrap{width: 1100px; height:1900px;}
+			#clTitle{width: 1100px; height:50px;}
+			#clWrap{width: 1040px; height:1680px; padding: 10px 30px;}
+			#clBottom{width: 1100px; height:150px;}
+
+/* 스케쥴 스타일링 */
+#schedule{margin-bottom: 60px;}
+#schedule .calender_wrap {float:left; margin-right:20px; width:400px;}
+#schedule .today_schedule {float:left; width:395px;  }
+#schedule .today_schedule .alignR {margin:0 0 3px; font-size:1em; text-align:right; padding-right: 80px;}
+#schedule .clear {clear:both; height:0; overflow:hidden;} 
+
+#schedule .cal_month_wrap {width:100%; overflow:hidden;}
+#schedule .cal_month_wrap .month_list {float:left; margin:0 2px; overflow:hidden;}
+#schedule .cal_month_wrap .month_list li {float:left; margin:0 7px;}
+#schedule .cal_month_wrap .month_list li a {color:#333333; font-size:1.25em; font-weight:bold;}
+#schedule .cal_month_wrap .month_list li a:hover,
+#schedule .cal_month_wrap .month_list li a.cur {color:#cc3300;}
+#schedule .cal_month_wrap .arr_btn {float:left; display:inline-block; padding:0 3px; height:20px; line-height:20px;}
+#schedule .cal_month_wrap .arr_btn img {vertical-align:middle;}
+#schedule .month {margin:5px 0 10px; font-size:1.25em; text-align:center;}
+
+#schedule .cal_tbl {table-layout:fixed; width:100%; border-collapse:collapse; border:1px solid #ddd;}
+#schedule .cal_tbl thead th {padding:10px 0; font-weight:normal; color:#333333; background:#f2f2f2;}
+#schedule .cal_tbl thead th.sat {color:#0072bc;}
+#schedule .cal_tbl thead th.sun {color:#c4151c;}
+#schedule .cal_tbl thead th,
+#schedule .cal_tbl tbody td {font-size:1.25em; border:solid #ddd; border-width:1px 0 0 1px; text-align:center;}
+#schedule .cal_tbl tbody td {color:#777777;}
+#schedule .cal_tbl thead th:first-child,
+#schedule .cal_tbl tbody td:first-child {border-left:0;}
+#schedule .cal_tbl tbody td a {display:block; padding:10px 0; color:#333333;}
+#schedule .cal_tbl tbody td a:hover {text-decoration:underline;}
+#schedule .cal_tbl tbody td.today a {color:#ffffff; background:#c4151c;}
+#schedule .cal_tbl tbody td.sat a {color:#0072bc;}
+#schedule .cal_tbl tbody td.sun a {color:#c4151c;}
+
+.bul_tit {margin:5px 0 10px; padding-left:22px; color:#333333; font-size:1.25em; font-weight:bold; line-height:1.5;}
+
+#todays {width: 550px; margin-left: 50px;}
+#todays .alignL {text-align:left;}
+#todays .list_head > .btn_wrap{float:right;}
+#todays .list_table{width:100%;}
+#todays .list_table > table{border-top:2px solid #1488d0; table-layout:fixed;}
+#todays .list_table > table th,
+#todays .list_table > table td{border:1px solid #ddd; padding:10px 5px;}
+#todays .list_table > table thead th{border-top:none; background:#f5f5f5; color:#666666;}
+#todays .list_table > table td{line-height:1.5;}
+#todays .list_table > table td > span{display:block;}
+#todays .list_table > table td a {color:#333333;}
+#todays .list_table > table td a:hover {color:#0072bc;}
+#todays .list_table > table td a.add_file {padding-right:20px; background:url(../../images/icon_file.gif) no-repeat right center;}
+#todays .list_table > table td a.add_file:hover {color:#c4151c;}
+#todays .list_table > table td.admin > input{width:50px; height:30px; line-height:30px; margin:0 auto; border-radius:2px; background:#e9af10; color:#ffffff;}
+#todays .list_table > table .admin{display:table-cell;}
+#citicoll .alignL {text-align:left;}
+#citicoll .list_head > .btn_wrap{float:right;}
+#citicoll .list_table{width:100%;}
+#citicoll .list_table > table{border-top:2px solid #1488d0; table-layout:fixed;}
+#citicoll .list_table > table th,#citicoll .list_table > table td{border:1px solid #ddd; padding:10px 5px;}
+#citicoll .list_table > table thead th{border-top:none; background:#f5f5f5; color:#666666;}
+#citicoll .list_table > table td{line-height:1.5;}
+#citicoll .list_table > table td > span{display:block;}
+#citicoll .list_table > table td a {color:#333333;}
+#citicoll .list_table > table td a:hover {color:#0072bc;}
+#citicoll .list_table > table td a.add_file {padding-right:20px; background:url(../../images/icon_file.gif) no-repeat right center;}
+#citicoll .list_table > table td a.add_file:hover {color:#c4151c;}
+#citicoll .list_table > table td.admin > input{width:50px; height:30px; line-height:30px; margin:0 auto; border-radius:2px; background:#e9af10; color:#ffffff;}
+#citicoll .list_table > table .admin{display:table-cell;}
+
+/* 안내 인포 담당자 */
+.pagedeptInfo {width:100%; padding:10px 0;}
+.contentsWrap{padding: 0px 100px 0px 30px;}
+.pagedeptInfo ul {border-top:1px solid #d2d2d2;}
+.pagedeptInfo ul li {position:relative; padding:15px 0 15px 180px; border-bottom:1px solid #d2d2d2;}
+.pagedeptInfo ul li .dh {position:absolute; left:0; top:0; bottom:0; width:160px; padding-top:15px; background:#f5f5f5; text-align:center; font-size:14px; font-weight:700;}
+.pagedeptInfo ul li .txt {font-size:14px;}
+.pagedeptInfo ul li .team {display:inline-block; height:25px; margin-right:20px; background:url(../../images/page_dept_info_tel_ico.gif) no-repeat left center; line-height:25px; font-size:14px;}
+.pagedeptInfo ul li .tel {display:inline-block; height:25px; margin-right:20px; line-height:25px; font-size:14px;}
+.pagedeptInfo ul li img {padding-right: 8px;}
+

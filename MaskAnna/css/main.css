@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* Base */
+html, body ,.scene{height: 100%; overflow:hidden;}
+h1{text-indent: 9999px;}
+
+/* 마스크 */
+.logo{position: absolute; width: 550px; height: 275px; top:43%; left:36%; z-index:9999;}
+.mask{overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.mask img{position: absolute; width: 100%; }
+.mask .line{position: absolute; width: 1px; height: 100%; background-color: #75e9e9; opacity: 0.8; top: 0;}
+.mask:first-child .line{display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

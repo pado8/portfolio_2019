@@ -1,0 +1,77 @@
+﻿#wrap{width: 100%; margin: 0 auto; /* background: #999999; */ }
+#topHeader{width: 100%; height:209px;  position:relative}
+#thtop{width: 100%; height: 69px; background: #1a5e8c;}
+#thtop .topWrap{width: 1400px;  height: 69px; margin: 0 auto;}
+.topLeft li{width: 150px; height: 69px; border-right: 1px solid #688fa8; }
+.topLeft li > a{display: block; color: #ffffff; text-align: center; padding-top: 22px; font-size: 18px;}
+.topLeft li a img{width: 13px; height: 13px; margin: 8px;}
+.topRight li{width: 140px; height: 69px; border-left: 1px solid #688fa8;}
+.topRight li > a{display: block; color: #ffffff; text-align: center; padding-top: 22px; font-size: 18px;}
+.topRight li a img{width: 13px; height: 10px; margin: 9px;}
+.topRight .snsImg a img{width: 25px; height: 25px; margin: 5px 2px;}
+#thtop > .topWrap > .topLeft > .homeBtwrap{width: 69px;}
+#thtop .topWrap li .homeBt{background: #ffffff; width: 69px; height: 69px; text-align: center; padding-top: 20px;}
+#thtop .topWrap li .homeBt img{width: 19px; height: 20px; vertical-align: middle;}
+/* 메뉴 스타일링 */
+#thmenu{width: 100%; height: 141px; background: #ffffff; border-bottom: 1px solid black; }
+.menuWrap{width: 1400px; height: 141px; background: #ffffff; margin: 0 auto;}
+.oneInner{width: 100%; height: 50px; left: 0px; top: 0px;}
+.phLogo{display: block; float: left; margin: 15px 70px 0 0; padding: 10px 0 0 0;}
+.oneDepth a:hover{}
+.oneDepth > li{height: 83px;  float: left; padding: 5px 30px; margin-top:48px;}
+.oneDepth > li > a{display: block; font-size: 1.6em; display: block; float: left; padding: 5px; color: #000040; text-align: center;}
+.oneDepth > li:hover > .twoInner{display: block;}
+.twoInner{width: 100%; height: 315px; position: absolute; top: 211px; left: 0px; display: none;  background: #f7f7f7;  border-bottom: 1px solid #326cbb;}
+.twoDep1400{width:1400px; position: relative; margin: 0 auto;}
+.menuLeft{width: 250px; height: 315px; background: url(../images/menuhoverbg.png) no-repeat bottom right; float: left;}
+.menuLeft h2{line-height: 45px;}
+.menuLeft p{line-height: 25px;}
+.twoDepth{margin-left:251px; width: 200px; height: 315px; background: #3a7cd2;}
+.twoDepth > li{line-height: 58px; text-align: left; height: 58px; border-bottom: 1px solid #326cbb; color:#ffffff; box-sizing:border-box; font-size: 15px; color:#ffffff;}
+.twoDepth > li > a{color:#ffffff; text-decoration: none; font-weight: bold;} 
+.twoDepthitem{position:relative; width: 200px;  }
+.twoDepthitem:hover{background: #004094;}
+.twoDepthitem a{color:#ffffff; padding-left: 20px;}
+.threeDepth{position: absolute; top:0; left:200px; width: 950px;color: #999999; }
+.threeDepth > li{float: left; padding-left: 10px;}
+.threeDepth > li > a{display: block; float: left; padding-left: 5px; font-size: 1em; color: #000000; }
+.threeDepth > li > a:before{content: url(../images/dot.gif);}
+.oneDepth > li.last{height: 83px;  float: left; padding: 5px 0px; margin-top:48px;}
+#thmenu .oneDepth .allMenu{float: left; width: 40px; height: 60px; padding: 5px 0; margin-right: 40px;}
+#thmenu .oneDepth .phSarang{float: left; width: 40px; height: 60px; padding: 5px 0;}
+.sideMenubt{display: block; width: 60px;}
+#thmenu .oneDepth img{display: block; margin: 0 auto;}
+.caption{font-size: 14px; text-align: center;}
+
+/* 서브 타이틀 */
+#mainTop{width: 1100px; height:149px; background: url(../images/snb_tit_wrap_bg.png); margin-right: 30px;}
+#mainTop h2{line-height: 149px; text-align: center; color: #ffffff; font-size: 2.5em; letter-spacing: 2px;}
+
+
+
+/* 푸터 스타일링 서브동일 (완전 종결)*/
+#footer{width: 100%; height:319px; /* margin: 0 auto; */  background: #424950;}
+#ftMenu{width: 1400px; height: 75px; margin: 0 auto;}
+.ftsiteWrap{width: 1400px;}
+#ftMenu li{float: left;}
+.box{width: 200px; height: 43px; background: url(../images/family_site_plus.png) no-repeat 90% center; padding: 15px; border: 1px solid #bbbbbb;}
+.box a{display: block; float: left; margin-top: 10px; font-size: 18px; color: #9b9ea2; padding: 0 10px;}
+#ftCopyright{width: 100%; height: 244px; background: #e6e6e6; margin: 0 auto;}
+.ftcopyrightBox{width: 1400px; padding-top: 35px;  margin: 0 auto;}
+.ftcopyrightText{width: 1050px;font-size: 14px; color: #666666;}
+.ftmarkupBox{width: 350px;}
+.ftmarkupBox img{float: right; padding-left: 10px;  text-align: right;}
+.ftmarkupBox .markupHTML{padding-top: 10px;}
+.red{color: red;}
+
+
+
+    
+
+
+
+
+
+
+
+

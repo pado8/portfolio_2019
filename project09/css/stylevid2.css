@@ -1,0 +1,3 @@
+/* 배경동영상 */
+.vid {position:absolute; top:60px; left:0px; /* opacity:0.9; */ }
+.vid video { width:100%; min-width:1200px; }

@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="노태효"/>
+	<meta name="keywords" content="KFC" />
+	<meta name="Description" content="KFC 메인 페이지에 오신 것을 환영합니다"/>
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<link rel="shortcut icon" href="favicon/favicon.ico"> <!-- 파비콘 -->
+	<link rel="apple-touch-icon-precomposed" href="apple-icon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114.png">
+	<title>KFC</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/respon.css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean" rel="stylesheet">
+	<script src="js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이이브러리 연동 -->
+	<script src="js/jquery.easing.1.3.min.js"></script> 
+	<script src="js/swipe.js"></script> <!-- 터치 슬라이드 플러그인 연동 -->
+	<script src="js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+	<script src="js/jquery.cookie.js"></script>  <!-- 쿠키 플러그인 연동 -->
+	<script src="js/common.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/DB_springMove_fn.js"></script>	
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBt35gzWo2l6fjFpIJXog9N5DJpuNp8nI&callback=initMap"></script>	
+	<script src="js/map.js"></script>
+	<style>
+		#map-canvas{width: 100%; height: 253px; margin-top: 1px; background-color: #ffffff; border: 1px solid #e0e0e0;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="top_event">
+			<div class="event">
+				<div class="close_btn"></div>
+			</div>
+		</div>
+		<div id="header">
+			<div class="head_info"></div>
+			<div class="phone_talmenu"><a href="#" class="btnMenu"><img src="img/phone_talmenu.png" alt="폰 전체메뉴"/></a></div>
+			<a href="#"><h1><span class="hide">kfc</span></h1></a>
+			<dl id="util_menu">
+				<dt class="hide">유틸메뉴</dt>
+				<dd class="clickme fl DB_etc10_1" style="width:128px"><img src="img/login_click.png" alt="로그인 클릭"/></dd>
+				<dd class="util_first">
+					<ul>
+						<li class="login_wrap logtxt"><a href="#">로그인</a>
+							<form action="#" id="login_f" method="post" name="log_f">
+								<fieldset>
+									<legend>로그인</legend>
+									<p class="user_id">
+										<label for="user_id"><img src="img/login_title_id.gif" alt="아이디" /></label>
+										<input type="text" name="user_id" id="user_id" />
+									</p>
+									<p class="user_pw">
+										<label for="user_pw"><img src="img/login_title_pw.gif" alt="패스워드" /></label>
+										<input type="text" name="user_pw" id="user_pw" />
+									</p>
+									<p>
+										<input type="checkbox" name="save_id" id="save_id" />
+										<label for="save_id">비밀번호 저장</label>
+									</p>
+									<p class="log_btn">
+										<input type="image" src="img/login_btn.png" alt="login" />
+									</p>
+									<p class="join_btn_wrap">
+										<a href="#">회원가입</a>
+										<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
+									</p>
+									<p class="login_close_btn"><a href="#"><img src="img/login_close_btn.png" alt="닫기버튼" /></a></p>
+								</fieldset>
+							</form>
+						</li>
+						<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;회원가입</a></li>
+						<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;주문내역확인</a></li>
+						<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul id="zoom">
+						<li><img src="img/util_zoom_1.gif"  alt="줌1"/></li>
+						<li><a href="#" class="zoom_in"><img src="img/util_zoom_2.gif" alt="줌2"/></a></li>
+						<li><a href="#" class="zoom_return"><img src="img/util_zoom_3.gif" alt="줌3"/></a></li>
+						<li><a href="#" class="zoom_out"><img src="img/util_zoom_4.gif" alt="줌4"/></a></li>
+					</ul>
+				</dd>
+				<dd><a href="#" class="print_btn"><img src="img/util_print.gif" alt="프린트버튼"/></a></dd>
+			</dl>
+			<form action="#" method="get" name="sch_f" id="sch_f">
+				<fieldset>
+					<legend>검색폼</legend>
+					<p>
+						<input type="text" name="keyword" id="keyword" title="검색어입력" />
+						<input type="image" src="img/search-button.png" class="sch_btn" alt="검색" />
+					</p>
+				</fieldset>
+			</form>
+			<h2 class="hide">메인메뉴</h2>
+			<div id="gnb_wrap">
+				<ul id="gnb">
+					<li class="fir"><a href="#">MENU<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub1">
+							<li class="mfir"><a href="#">세트</a></li>
+							<li><a href="#">치킨</a></li>
+							<li><a href="#">버거</a></li>
+							<li><a href="#">스낵&사이드</a></li>
+							<li class="mlast"><a href="#">음료</a></li>
+						</ul>
+					</li>
+					<li><a href="#">DELIVERY<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub2">
+							<li class="mfir"><a href="#">추천메뉴</a></li>
+							<li><a href="#">치킨&세트</a></li>
+							<li><a href="#">버거&세트</a></li>
+							<li><a href="#">스낵&사이드</a></li>
+							<li class="mlast"><a href="#">음료</a></li>
+						</ul>
+					</li>
+					<li><a href="#">STORE<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub3">
+							<li class="mfir"><a href="#">매장찾기</a></li>
+							<li><a href="#">신규 입점 문의</a></li>
+							<li><a href="#">고객센터</a></li>
+							<li><a href="#">영양정보&원산지</a></li>
+							<li class="mlast"><a href="#">알레르기 유발물질</a></li>
+						</ul>
+					</li>
+					<li><a href="#">EVENT<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub4">
+							<li class="mfir"><a href="#">프로모션</a></li>
+							<li><a href="#">새소식</a></li>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">멤버십</a></li>
+							<li class="mlast"><a href="#">카드 & 상품권</a></li>
+						</ul>
+					</li>
+					<li><a href="#">KFC SERVICE<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub5">
+							<li class="mfir mlast"><a href="#">KFC APP 소개</a></li>
+						</ul>
+					</li>
+					<li><a href="#">KFC IS<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub6">
+							<li class="mfir"><a href="#">KFC 소개</a></li>
+							<li><a href="#">CF</a></li>
+							<li><a href="#">회사소개</a></li>
+							<li class="mlast"><a href="#">맛의비밀</a></li>
+						</ul>
+					</li>
+					<li><a href="#">인재채용<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub7">
+							<li class="mfir mlast"><a href="#">KFC 인재채용</a></li>
+						</ul>
+					</li>
+					<li><a href="#">신규 입점 문의<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub8">
+							<li class="mfir mlast"><a href="#">임대방식</a></li>
+						</ul>
+					</li>
+					<li class="oneilst"><a href="#">KFC FANDOM<span class="line-cover"><span class="gnb-line"></span></span></a>
+						<ul class="sub9">
+							<li class="mfir"><a href="#">KFC Facebook</a></li>
+							<li class="mlast"><a href="#">KFC Instagram</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<p id="total_btn">
+				<a href="#"><img src="img/btn_all_menu.png" alt="전체 메뉴" /></a>
+			</p>
+			<div id="total_menu">
+				<dl>
+					<dt>MENU</dt>
+					<dd>
+						<ul>
+							<li><a href="#">세트</a></li>
+							<li><a href="#">치킨</a></li>
+							<li><a href="#">버거</a></li>
+							<li><a href="#">스낵&사이드</a></li>
+							<li><a href="#">음료</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>DELIVERY</dt>
+					<dd>
+						<ul>
+							<li><a href="#">추천메뉴</a></li>
+							<li><a href="#">치킨&세트</a></li>
+							<li><a href="#">버거&세트</a></li>
+							<li><a href="#">스낵&사이드</a></li>
+							<li><a href="#">음료</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>STORE</dt>
+					<dd>
+						<ul>
+							<li><a href="#">매장찾기</a></li>
+							<li><a href="#">신규 입점 문의</a></li>
+							<li><a href="#">고객센터</a></li>
+							<li><a href="#">영양정보&원산지</a></li>
+							<li><a href="#">알레르기 유발물질</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>EVENT</dt>
+					<dd>
+						<ul>
+							<li><a href="#">프로모션</a></li>
+							<li><a href="#">새소식</a></li>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">멤버십</a></li>
+							<li><a href="#">카드 & 상품권</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>KFC SERVICE</dt>
+					<dd>
+						<ul>
+							<li><a href="#">KFC APP 소개</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>KFC IS</dt>
+					<dd>
+						<ul>
+							<li><a href="#">KFC 소개</a></li>
+							<li><a href="#">CF</a></li>
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">맛의비밀</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>인재채용</dt>
+					<dd>
+						<ul>
+							<li><a href="#">KFC 인재채용</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>신규 입점 문의</dt>
+					<dd>
+						<ul>
+							<li><a href="#">임대방식</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>KFC FANDOM</dt>
+					<dd class="blast">
+						<ul>
+							<li><a href="#">KFC Facebook</a></li>
+							<li><a href="#">KFC Instagram</a></li>
+						</ul>
+					</dd>
+				</dl><!-- 총9개 -->
+				<p id="total_close"><a href="#"><img src="img/allmenu_close_btn.png" alt="전체메뉴 닫기" /></a></p>
+			</div>
+			<!-- <p id="date_wrap">
+				<span class="year">0000</span> 년
+				<span class="month">00</span> 월
+				<span class="date">00</span> 일
+			</p> -->
+		</div><!-- id="header" -->
+		<div id="visual">
+			<div id="mySwipe" class="swipe">
+				<ul class="touch_banner swipe-wrap">
+					<li><a href="#" class="main_visual1"></a></li>
+					<li><a href="#" class="main_visual2"></a></li>
+					<li><a href="#" class="main_visual3"></a></li>
+					<li><a href="#" class="main_visual4"></a></li>
+				</ul>
+			</div>
+			<ul class="touch_bullet">
+				<li><img src="img/visual_bullet_on.png"  alt="비주얼버튼" class="active" /></li>
+				<li><img src="img/visual_bullet_off.png" alt="비주얼버튼"/></li>
+				<li><img src="img/visual_bullet_off.png" alt="비주얼버튼"/></li>
+				<li><img src="img/visual_bullet_off.png" alt="비주얼버튼"/></li>
+			</ul>
+			<p class="touch_left_btn">
+				<a href="#"><img src="img/slide-left-button.png" alt="이전 배너" /></a>
+			</p>
+			<p class="touch_right_btn">
+				<a href="#"><img src="img/slide-right-button.png" alt="다음 배너" /></a>
+			</p>
+		</div><!-- id="visual" -->
+		<hr />
+		<div id="contents">
+			<div id="main_goods">
+				<h2>인기상품</h2>
+				<div class="goods_fl">
+					<a href="#">
+						<div class="goods_box first">
+							<div class="goods_img01"><img src="img/main_goods_op.png" alt="" /></div>
+							<div class="goods_info">
+								<p class="strong">[추천] 블랙라벨치킨8조각</p>
+								<p>21,200원</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="goods_fl">
+					<a href="#">
+						<div class="goods_box">
+							<div class="goods_img02"><img src="img/main_goods_op.png" alt="" /></div>
+							<div class="goods_info">
+								<p class="strong">[추천] 타워버거</p>
+								<p>4,600원</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="goods_fl">
+					<a href="#">
+						<div class="goods_box">
+							<div class="goods_img03"><img src="img/main_goods_op.png" alt="" /></div>
+							<div class="goods_info">
+								<p class="strong">[신제품] 트리플리치오리지널세트</p>
+								<p>6,400원</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="goods_fl">
+					<a href="#">
+						<div class="goods_box">
+							<div class="goods_img04"><img src="img/main_goods_op.png" alt="" /></div>
+							<div class="goods_info">
+								<p class="strong">[세트추천] 징거더블다운맥스세트</p>
+								<p>9,300원</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="goods_fl">
+					<a href="#">
+						<div class="goods_box last">
+							<div class="goods_img05"><img src="img/main_goods_op.png" alt="" /></div>
+							<div class="goods_info">
+								<p class="strong">[추천] 블랙라벨에그타워버거</p>
+								<p>5,300원</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div><!-- id="main_goods" -->
+			<div id="contents_top">
+				<div id="roll_banner_wrap">
+					<h3>행사상품</h3>
+					<dl>
+						<dt class="roll_btn1"><a href="#" class="active"><img src="img/pop_btn_1_over.png" alt="버튼1" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods01.jpg" alt="배너1" /></a></dd>
+						<dt class="roll_btn2"><a href="#"><img src="img/pop_btn_2_out.png" alt="버튼2" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods02.jpg" alt="배너2" /></a></dd>
+						
+						<dt class="roll_btn3"><a href="#"><img src="img/pop_btn_3_out.png" alt="버튼3" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods03.jpg" alt="배너3" /></a></dd>
+						<dt class="roll_btn4"><a href="#"><img src="img/pop_btn_4_out.png" alt="버튼4" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods04.jpg" alt="배너4" /></a></dd>
+						<dt class="roll_btn5"><a href="#"><img src="img/pop_btn_5_out.png" alt="버튼5" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods05.jpg" alt="배너5" /></a></dd>
+						<dt class="roll_btn6"><a href="#"><img src="img/pop_btn_6_out.png" alt="버튼6" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods06.jpg" alt="배너6" /></a></dd>
+						<dt class="roll_btn7"><a href="#"><img src="img/pop_btn_7_out.png" alt="버튼7" /></a></dt>
+						<dd><a href="#"><img src="img/new_goods07.jpg" alt="배너7" /></a></dd>
+					</dl><!-- 총 7개 -->
+					<p class="ctl_btn">
+						<a href="#" class="playBtn"><img src="img/pop_btn_play_on.gif" alt="재생 버튼" /></a>
+						<a href="#" class="stopBtn"><img src="img/pop_btn_stop_off.gif" alt="정지 버튼" /></a>
+					</p>
+				</div><!-- id="roll_banner_wrap" -->
+				<dl id="tabmenu">
+					<dt class="tab_btn1"><a href="#"><img src="img/tab_btn_1_over.png" alt="행사" /></a></dt>
+					<dd>
+						<img src="img/banner01.jpg" alt="banner01" class="fl" />
+						<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+					</dd>
+					<dt class="tab_btn2"><a href="#"><img src="img/tab_btn_2_out.png" alt="딜리버리" /></a></dt>
+					<dd>
+						<img src="img/banner02.jpg" alt="banner02" class="fl" />
+						<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+					</dd>
+					<dt class="tab_btn3"><a href="#"><img src="img/tab_btn_3_out.png" alt="매장별" /></a></dt>
+					<dd>
+						<img src="img/banner03.jpg" alt="banner03" class="fl" />
+						<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+					</dd>
+				</dl><!-- id="tabmenu" -->
+				<div class="kfcapp fr">
+					<a href="#">
+						<div class="kfcapp_info">
+							<h3>KFC APP</h3>
+						</div>					
+						<div class="app_box">
+							<div class="kfcapp_img"><img src="img/kfcapp_view.png" alt="" /></div>
+						</div>
+					</a>
+				</div>				
+				<div id="event_wrap" class="fl">
+					<div id="brandVisual">
+						<ul>
+							<li class="visual_0"><a href="#">베너이미지1</a></li>
+							<li class="visual_1"><a href="#">베너이미지2</a></li>
+							<li class="visual_2"><a href="#">베너이미지3</a></li>
+							<li class="visual_3"><a href="#">베너이미지4</a></li>
+							<li class="visual_4"><a href="#">베너이미지5</a></li>
+							<li class="visual_5"><a href="#">베너이미지6</a></li>
+						</ul>
+					</div>
+					<ul id="buttonList">
+						<li class="on"><a href="#">배너1</a></li>
+						<li><a href="#">배너2</a></li>
+						<li><a href="#">배너3</a></li>
+						<li><a href="#">배너4</a></li>
+						<li><a href="#">배너5</a></li>
+						<li><a href="#">배너6</a></li>
+					</ul>
+				</div><!-- id="event_wrap" -->
+			</div><!-- id="contents_top" -->
+			
+			<!-- 레시피 상품 슬라이드 만들기 -->
+			<div id="recipe">
+				<h3>런치행사상품</h3>
+				<a href="#" class="r_more">행사상품 전체보기</a>
+				<div class="animation_canvas">
+					<div class="slider_panel">
+						<a href="#"><img src="img/recipe01.jpg" class="slider_image" alt="" /></a>
+						<a href="#"><img src="img/recipe02.jpg" class="slider_image" alt="" /></a>
+						<a href="#"><img src="img/recipe03.jpg" class="slider_image" alt="" /></a>
+						<a href="#"><img src="img/recipe04.jpg" class="slider_image" alt="" /></a>
+						<a href="#"><img src="img/recipe05.jpg" class="slider_image" alt="" /></a>
+					</div>
+					<div class="control_panel">
+						<div class="control_button"></div>
+						<div class="control_button"></div>
+						<div class="control_button"></div>
+						<div class="control_button"></div>
+						<div class="control_button"></div>
+					</div>
+				</div><!-- class="animation_canvas" -->
+				<div class="slider_text_panel">
+					<div class="slider_text">
+						<h2>상품구성 &amp; 가격&nbsp; </h2>
+						<p class="line"></p>
+						<a href="#"><div class="sliderwd">
+							<img src="img/r_goods01.png" alt="" />
+						</div></a>
+						<p>닭다리 튀김, 감자 으깬 감자, 비스킷</p>
+						<p>6,800원</p>
+					</div>
+					<div class="slider_text">
+						<h2>상품구성 &amp; 가격&nbsp; </h2>
+						<p class="line"></p>
+						<a href="#"><div class="sliderwd">
+							<img src="img/r_goods02.png" alt="" />
+						</div></a>
+						<p>치킨 텐더, 으깬 감자, 비스킷</p>
+						<p>7,600원</p>
+					</div>
+					<div class="slider_text">
+						<h2>상품구성 &amp; 가격&nbsp; </h2>
+						<p class="line"></p>
+						<a href="#"><div class="sliderwd">
+							<img src="img/r_goods03.png" alt="" />
+						</div></a>
+						<p>닭가슴 튀김, 으깬 감자, 비스킷</p>
+						<p>5,900원</p>
+					</div>
+					<div class="slider_text">
+						<h2>상품구성 &amp; 가격&nbsp; </h2>
+						<p class="line"></p>
+						<a href="#"><div class="sliderwd">
+							<img src="img/r_goods04.png" alt="" />
+						</div></a>
+						<p>치킨 팝 파이 , 비스킷, 음료</p>
+						<p>6,400원</p>
+					</div>
+					<div class="slider_text">
+						<h2>상품구성 &amp; 가격&nbsp; </h2>
+						<p class="line"></p>
+						<a href="#"><div class="sliderwd">
+							<img src="img/r_goods05.png" alt="" />
+						</div></a>
+						<p>치킨 & 흰쌀밥, 비스킷, 음료</p>
+						<p>5,500원</p>
+					</div>
+				</div>
+				<div class="join">
+					<h3>KFC FANDOM</h3>
+					<div class="kfc_fandom">
+						<div class="fanborder">
+							<a href="#">
+								<div class="kfc_facebook">
+										<img src="img/fandom_ico_facebook.png" alt="kfc_facebook"/>
+										<span>KFC FACEBOOK</span>
+										<div>
+											<div class="facelike"></div><span>53,609,744</span>
+										</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="kfc_instagram">
+										<img src="img/fandom_ico_instagram.png" alt="kfc_instagram"/>
+										<span>KFC INSTAGRAM</span>
+										<div>
+											<div class="follow"></div><span>27.2K</span>
+										</div>							
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div><!-- id="recipe" -->
+			<!-- 자동슬라이드 배너를 이용한 베스트 상품 영역 만들기 -->
+			<div id="bestgoods_zone">
+				<h3>스낵 & 사이드 상품</h3>
+				<div id="best_bg">
+					<ul>
+						<li><a href="#"><img src="img/fruit01.png" alt="" /><span>핫윙</span></a></li>
+						<li><a href="#"><img src="img/fruit02.png" alt="" /><span>텐더</span></a></li>
+						<li><a href="#"><img src="img/fruit03.png" alt="" /><span>통오징어바이트</span></a></li>
+						<li><a href="#"><img src="img/fruit04.png" alt="" /><span>텐더떡볶이</span></a></li>
+						<li><a href="#"><img src="img/fruit05.png" alt="" /><span>롱치즈스틱</span></a></li>
+						<li><a href="#"><img src="img/fruit06.png" alt="" /><span>에그타르트</span></a></li>
+						<li><a href="#"><img src="img/fruit07.png" alt="" /><span>비스켓</span></a></li>
+						<li><a href="#"><img src="img/fruit08.png" alt="" /><span>감자튀김</span></a></li>
+						<li><a href="#"><img src="img/fruit09.png" alt="" /><span>코울슬로</span></a></li>
+						<li><a href="#"><img src="img/fruit10.png" alt="" /><span>콘샐러드</span></a></li>
+					</ul><!-- 총 10개 -->
+					<p class="prev_btn"><a href="#"><img src="img/slide-sub-left-button-black.png" alt="이전으로 이동" /></a></p>
+					<p class="next_btn"><a href="#"><img src="img/slide-sub-right-button-black.png" alt="다음으로 이동" /></a></p>
+				</div>
+			</div><!-- id="bestgoods_zone" -->
+			
+			<div id="contents_bottom">
+				<div id="map_wrap">
+					<h3>오시는 길</h3>
+					<div id="map-canvas" title="찾아오는 길"></div>
+				</div><!-- id="map_wrap" -->
+				<div id="online_wrap">
+					<h3>KFC Loves</h3>
+					<p>| Partners</p>
+					<ul><!-- 총 6개 -->
+						<li class="fl"><a href="#"><img src="img/online_banner01.jpg" alt="배너1" title="REACH" /></a></li>
+						<li class="fl"><a href="#"><img src="img/online_banner02.jpg" alt="배너2" title="RISE" /></a></li>
+						<li class="fl"><a href="#"><img src="img/online_banner03.jpg" alt="배너3" title="FAMILY FUND" /></a></li>
+						<li class="fl"><a href="#"><img src="img/online_banner04.jpg" alt="배너4" title="MY CHANGE" /></a></li>
+						<li class="fl"><a href="#"><img src="img/online_banner05.png" alt="배너4" title="MY CHANGE" /></a></li>
+						<li class="fl"><a href="#"><img src="img/online_banner06.jpg" alt="배너4" title="MY CHANGE" /></a></li>
+					</ul>
+				</div><!-- id="online_wrap" -->
+			</div><!-- id="contents_bottom" -->
+			
+			<div id="quick_menu">
+				<h3><a href="#">딜리버리<img src="img/icon-truck.png" alt="딜리버리안내" /></a></h3>
+				<ul>
+					<li><a href="#">추천메뉴</a></li>
+					<li><a href="#">버거&세트</a></li>
+					<li><a href="#">스낵&사이드</a></li>
+					<li><a href="#">음료</a></li>
+					<li><a href="#">장바구니(0)</a></li>
+					<li><a href="#">주소등록</a></li>
+					<li><a href="#">배달매장</a></li>
+					<li class="last">
+						<a href="#top" class="fl quick_btn"><img src="img/quick_up.png" alt="위로" /></a>
+						<a href="#footer_wrap" class="fl quick_btn"><img src="img/quick_down.png" alt="아래로" /></a>
+					</li>
+				</ul>
+			</div><!-- id="quick_menu" -->
+			
+			<p id="pop_wrap">
+				<img src="img/popup.png" alt="징거더블다운맥스 행사" usemap="#pop" />
+				<map name="pop" id="pop">
+					<area shape="rect" coords="322,397,359,413" href="#" alt="창닫기"/>
+					<area shape="rect" coords="161,396,289,418" href="#" alt="하루동안 창 닫기"/>
+				</map>
+			</p>
+		</div><!-- id="contents" -->
+	</div><!-- id="wrap" -->
+	<hr />
+	<!-- kfc 배경 삽입 -->
+	<div class="store">
+		<h2>kfc 배경 삽입</h2>
+		<div class="cup">
+			<p class="title">
+				STORE<br>
+				SEARCH
+			</p>
+			<p class="subject">
+				고객님과 가장 가까이 있는<br>
+				매장을 찾아보세요!
+			</p>
+			<a href="#" class="btn">VIEW</a>
+		</div>
+	</div>
+	<div id="footer_wrap">
+		<div id="happy_call" class="cf">
+			<a href="#">
+				<div class="wrap01 fl"></div>
+			</a>
+			<a href="#">
+				<div class="wrap02 fl"></div>
+			</a>
+		</div><!-- id="happy_call" -->
+		
+		<div id="inner_footer">
+			<h3 class="footer_logo">
+				<a href="#"><img src="img/footer_logo.png" alt="KFC Logo" /></a>
+			</h3>
+			<dl id="bottom_menu">
+				<dt class="hide">하단메뉴</dt>
+				<dd><a href="#"><strong>개인정보취급방침</strong></a></dd>
+				<dd><a href="#">사이트 이용약관</a></dd>
+				<dd><a href="#">위치정보 이용약관</a></dd>
+				<dd><a href="#">사이트맵</a></dd>
+				<dd><a href="#">KFC 선불카드 이용약관</a></dd>
+			</dl>
+			<div id="award">
+				<img src="img/footer_banner_01.png" alt="배너1"/>
+				<img src="img/footer_banner_02.png" alt="배너2"/>
+				<img src="img/footer_banner_03.png" alt="배너3"/>
+				<img src="img/footer_banner_04.png" alt="배너4"/>
+				<img src="img/footer_banner_05.png" alt="배너5"/>
+			</div>
+			<div id="relSite_wrap">
+				<h3>KFC partners</h3>
+				<form action="#" method="get" name="rel_f">
+					<fieldset>
+						<legend>관련 사이트 이동</legend>
+						<select name="rel_select">
+							<option value="http://naver.com">REACH</option>
+							<option value="http://naver.com">RISE</option>
+							<option value="http://naver.com">FAMILY FUND</option>
+							<option value="http://naver.com">MY CHANGE</option>
+						</select>
+						<input type="image" src="img/rel_site_btn.gif" alt="관련 사이트 이동" />
+					</fieldset>
+				</form>
+			</div><!-- id="relSite_wrap" -->
+			<address>
+				<div class="ellipsis">
+					서울특별시 종로구 창경궁로 120(인의동, 종로플레이스 8층)
+				</div>
+				<div class="ellipsis">
+					사업자등록번호 : 201-81-89723 / 주식회사 KFC KOREA / 대표자 : 엄익수
+				</div>
+				<div class="ellipsis">
+					TEL : 02)6020-8368 월~금 09:00~17:00 공휴일 제외 / FAX : 02)6020-8399
+				</div>
+				<div class="ellipsis">
+					&copy;2017 KFC KOREA Co., Ltd. All Rights Reserved.
+				</div>
+			</address>
+		</div><!-- id="inner_footer" -->
+	</div><!-- id="footer_wrap" -->
+
+	<div id="gnbMo">
+		<a href="#">Close</a>
+		<ul>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">DELIVERY</a></li>
+			<li><a href="#">STORE</a></li>
+			<li><a href="#">EVENT</a></li>
+			<li><a href="#">KFC SERVICE</a></li>
+			<li><a href="#">KFC IS</a></li>
+			<li><a href="#">인재채용</a></li>
+			<li><a href="#">신규 입점 문의</a></li>
+		</ul>
+	</div>
+
+	<div class="mobilefoot">
+		<ul>
+			<li><a href="#"><span class="mf1">홈</span></a></li>
+			<li><a href="#"><span class="mf2">전체 메뉴</span></a></li>
+			<li><a href="#"><span class="mf3">딜리버리</span></a></li>
+			<li><a href="#"><span class="mf4">my kfc</span></a></li>
+		</ul>
+	</div>
+	
+	<!-- 	
+<div mob-slide-menu="" class="m-header on open">
+	<div class="fix-wrap">
+		<div class="cover">
+			<div class="utils">
+				<div class="login">
+					<a href="/member/login" class=""><span class="bt"><img src="/static/img/static2/m_login_btn.png" alt="로그인"></span></a>
+				</div>
+				<div class="bts on">
+					<ul class="o2">
+						<li><a href="/delivery/recommend" class="btn">딜리버리</a></li>
+						<li><a href="/guest/guestLogin" class="btn">주문내역</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav>
+			<ul>
+				<li class="group" style="height: 60px;"><a>MENU</a>
+				<ul>
+					<li><a href="/menu/box" class="">박스</a></li>
+					<li><a href="/menu/set" class="">세트</a></li>
+					<li><a href="/menu/chicken" class="">치킨</a></li>
+					<li><a href="/menu/burger" class="">버거</a></li>
+					<li><a href="/menu/snack" class="">스낵&amp;사이드</a></li>
+					<li><a href="/menu/drink" class="">음료</a></li>
+					<li><a href="/menu/origin" class="">영양정보&amp;원산지</a></li>
+					<li><a href="/menu/allergy" class="">알레르기 유발물질</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>DELIVERY</a>
+				<ul>
+					<li><a href="/delivery/recommend" class="">추천메뉴</a></li>
+					<li><a href="/delivery/chicken" class="">치킨&amp;세트</a></li>
+					<li><a href="/delivery/burger" class="">버거&amp;세트</a></li>
+					<li><a href="/delivery/snack" class="">스낵&amp;사이드</a></li>
+					<li><a href="/delivery/drink" class="">음료</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>STORE</a>
+				<ul>
+					<li><a href="/store/findStore" class="">매장찾기</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>EVENT</a>
+				<ul>
+					<li class="group" style="height: 41px;"><a>프로모션</a>
+					<ul>
+						<li><a href="/promotion/promotionList/A801" class="">진행중 이벤트</a></li>
+						<li><a href="/promotion/promotionEndList" class="">종료된 이벤트</a></li>
+					</ul>
+					</li>
+					<li class="group" style="height: 41px;"><a>새소식</a>
+					<ul>
+						<li><a href="/promotion/newMenu" class="">신메뉴</a></li>
+						<li><a href="/promotion/promotionOffShop" class="">신규매장</a></li>
+					</ul>
+					</li>
+					<li><a href="/board/notice/BD01" class="">공지사항</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>KFC SERVICE</a>
+				<ul>
+					<li><a href="/service/membership" class="">멤버십</a></li>
+					<li class="group" style="height: 41px;"><a>카드 &amp; 상품권</a>
+					<ul>
+						<li><a href="/service/prepaidCard" class="">선불카드</a></li>
+						<li><a href="/service/giftCard" class="">상품권</a></li>
+					</ul>
+					</li>
+					<li><a href="/service/delivery" class="">딜리버리 TIP</a></li>
+					<li><a href="/service/order" class="">징거벨오더 TIP</a></li>
+					<li><a href="/service/serviceApp" class="">KFC APP 소개</a></li>
+					<li><a href="/service/customerCenter" class="">고객센터</a></li>
+					<li class="group" style="height: 41px;"><a>신규 입점 문의</a>
+					<ul>
+						<li><a href="/service/contactUs" class="">임대방식</a></li>
+					</ul>
+					</li>
+					<li><a href="/service/recipe" class="">맛의비밀</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>KFC IS</a>
+				<ul>
+					<li><a href="/introduce#kfcIs-sec-02" class="">KFC 소개</a></li>
+					<li><a href="/introduce#kfcIs-sec-04" class="">CF</a></li>
+					<li><a href="/introduce#kfcIs-sec-05" class="">회사소개</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>인재채용</a>
+				<ul>
+					<li><a href="http://recruit.kfckorea.com/KOR/REC0001.aspx" target="_blank">KFC 인재채용</a></li>
+				</ul>
+				</li>
+				<li class="group" style="height: 60px;"><a>신규 입점 문의</a>
+				<ul>
+					<li><a href="/service/contactUs" class="">임대방식</a></li>
+				</ul>
+				</li>
+			</ul>
+			</nav><a class="btn-x"><span>닫기</span></a>
+		</div>
+	</div>
+	<p class="dim"></p>
+</div>	
+
+	 -->
+	
+	
+	
+	
+	
+
+<script> 
+$('.DB_etc10_1').DB_springMove({
+	key:'e24102',          //라이센스키
+	dir:'x',               //방향축('x','y')
+	mirror:1,              //반대방향이동(1,-1)
+	radius:10,             //반경
+	motionSpeed:0.1        //속도(0~1)
+})
+</script>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

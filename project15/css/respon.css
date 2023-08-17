@@ -1,0 +1,485 @@
+﻿
+@media screen and (max-width:1280px) {
+	/* 메뉴 & 메인 비주얼 */
+	body{width: 100%;}
+    #wrap{width: 100%; margin: 0 auto;}
+	#top_event{height:0; transition: all 0.4s ease 0.3s;}
+	.event{height:0;}
+	#top_event > .event > .close_btn{display: none;}
+	#total_menu{display: none;}
+	#total_btn{display: none;}
+	#header{width: 100%;}
+	#header h1{position: absolute; left: 50%; top: 69px; background: url(../img/logo.png) no-repeat; width: 100px; height: 100px;  background-position: 0 -100px;}
+	#quick_menu{display: none;}
+	#gnb_wrap{width: 100%;}	
+	#gnb_wrap > #gnb > li.oneilst{display: none;}	
+	#gnb > li{font-size: 16px; width: 12.2%; padding: 12px 0px; letter-spacing: -1px;}
+	#visual{height: auto;}
+	#mySwipe > ul > li{height: 360px;}	
+	#mySwipe > ul > li a{height: 360px;}	
+	.main_visual1{background:url(../img/visual01.png) top center no-repeat; background-size: cover;}
+	.main_visual2{background:url(../img/visual02.png) top center no-repeat; background-size: cover;}
+	.main_visual3{background:url(../img/visual03.png) top center no-repeat; background-size: cover;}
+	.main_visual4{background:url(../img/visual04.png) top center no-repeat; background-size: cover;}
+	.touch_left_btn {left: 2%; top: 51%;}
+	.touch_right_btn {right: 2%; top: 51%;}
+	.touch_left_btn img{width: 54px;}
+	.touch_right_btn img{width: 54px;}
+	.touch_bullet{top: 93%;}
+	
+	/* 인기상품 컨텐츠 */
+	#contents{width: auto; padding-left: 50px;}
+	#main_goods{width: 100%;}
+	#main_goods .goods_fl:nth-child(4){display: none;}
+	#main_goods .goods_fl:nth-child(5){display: none;}
+	.goods_fl{width: 100%;}
+	.goods_box{width: 30%; height: 450px; margin-right: 2.9%;}
+	.goods_box img{width: 100%; height: 450px;}
+	.goods_img01 {width: 100%;}
+	.goods_img02 {width: 100%;}
+	.goods_img05 {width: 100%;}
+	.goods_info {text-align: center; border-top: 0;}
+	.goods_info p{font-size: 19px;}
+	.goods_box:hover img{display:none;}
+
+	/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 47%; margin-right: 6%;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%}
+	#tabmenu{width: 42.89%;}
+	#tabmenu>dd>img{width: 100%;}
+	
+	#event_wrap{width: 42.9%;}
+	#brandVisual{width: 100%; height: auto;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:cover;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:cover;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:cover;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:cover;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:cover;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:cover;}
+	
+	/* 런치 sns 컨텐츠 */
+	.join{display: none;}
+	#recipe{margin-top: 0px}
+	.slider_text_panel{width: 20.1%; right: 4.5%;}
+	.slider_text{width: 100%;}
+	.slider_text h2{width: 100%; text-indent: 0; text-align: center;}
+	.slider_text img{width: 80%;}
+	.sliderwd{width: 100%; margin: 0 auto; text-align: center;}
+	
+	/* 박스슬라이드 */
+	#best_bg{width: 100%;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 938px!important;}
+	
+	/* 맵 & 파트너 */
+	#map_wrap{width: 56%;}
+ 	#online_wrap{width: 40%;}
+ 	#online_wrap ul{width: 100%;}
+ 	#online_wrap ul li{width: 39%; margin-right: 4%;}
+	#online_wrap ul li img{width: 100%;}
+	#online_wrap li:nth-child(2){margin-right: 0px;}
+	#online_wrap li:nth-child(3){clear: left;}
+	#online_wrap li:nth-child(4){margin-right: 0px;}
+	#online_wrap li:nth-child(5){display: none;}
+	#online_wrap li:nth-child(6){display: none;}
+	
+	/* 푸터 */
+	#inner_footer{width: auto; padding-left: 50px;}
+	#relSite_wrap{display: none;}
+	#award{right: 4%;}
+	
+	.store{background-position-x: 60%;}
+}/* (max-width:1280px) */
+
+@media screen and (max-width:1024px) {
+    .head_info{display: none;}
+	#util_menu{display: none;}
+	#sch_f{display: none;}
+	#gnb_wrap{display: none; top: 85px;}
+	#date_wrap{display: none;}
+	#header{width: 100%; height: 55px; overflow: hidden; margin-bottom: 55px;}
+	#header h1{height: 36px;
+		position: absolute;
+		left: 44.6%;
+		top: 21.4px;
+		background-position: 0px -88px;
+		background-size: 209%;}
+	.phone_talmenu{display: block; position: absolute; top: 21.5px; left: 10px;}
+	.btnMenu img{width: 33.5px;}
+    .clickme{display: none;}
+	#total_btn > a > img{display: none;}
+	#date_wrap{display: none;}
+	#visual{height: auto;}
+	#mySwipe > ul > li{height: 300px;}
+	#mySwipe > ul > li a{height: 300px;}
+	.touch_bullet{top: 89%;}
+	.touch_left_btn {left: 2%; top: 51%;}
+	.touch_right_btn {right: 2%; top: 51%;}
+	.touch_left_btn img{width: 49px;}
+	.touch_right_btn img{width: 49px;}
+	
+	/* 인기상품 컨텐츠 */
+	#contents{width: auto;}
+	#main_goods{width: auto;}
+	#main_goods div.last{margin-right: 0px;}
+	#main_goods .goods_fl:nth-child(4){display: none;}
+	#main_goods .goods_fl:nth-child(5){display: none;}
+	.goods_box{width: 28%; height: 450px; margin-right: 5%;}
+	.goods_fl{width: 100%;}
+	.goods_box img{width: 100%; height: 450px;}
+	.goods_img01 {width: 100%;}
+	.goods_img02 {width: 100%;}
+	.goods_img05 {width: 100%;}
+	.goods_info {text-align: center;}
+	.goods_info p{font-size: 16px;}
+	
+	/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 46%;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%;}
+
+	#event_wrap{width: 42.9%;}
+	#brandVisual{width: 100%; height: auto; margin: 0;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:100%;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:100%;}
+	#buttonList li{top: -41px!important;}
+	
+	/* 런치 sns 컨텐츠 */
+	.join{display: none;}
+	.slider_text_panel{display: none;}
+	
+	/* 박스슬라이드 */
+	#best_bg{width: 100%;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 718px!important;}
+	
+	/* 맵 & 파트너 */ 
+	#map_wrap{width: 61%;}
+ 	#online_wrap{width: 35%;}
+ 	#online_wrap ul{width: 100%;}
+ 	#online_wrap ul li{width: 63%; margin-left: 4%; margin-right: 4%;}
+ 	#online_wrap ul li img{width: 100%;}
+	#online_wrap li:nth-child(2){clear: left; margin-right: 0px;}
+	#online_wrap li:nth-child(3){display: none;}
+	#online_wrap li:nth-child(4){display: none;}
+	#online_wrap li:nth-child(5){display: none;}
+	#online_wrap li:nth-child(6){display: none;}
+
+	/* 푸터 */
+	#inner_footer{width: auto;}
+	#relSite_wrap{display: none;}
+	#award{width: 390px; right: 4%; height: 130px;}
+	
+	.store{background-position-x: 62%;}
+}/* (max-width:1024px) */
+
+@media screen and (max-width:860px) {
+	/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 70%; margin-left: 90px;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%;}
+
+	#tabmenu{width: 42.89%; margin: 30px 50px 0 0;}
+	#tabmenu>dd>img{width: 100%;}
+	.tab_more{display: none;} 
+	#event_wrap{width: 45.6%; margin-top: 16px;}
+	#brandVisual{width: 100%; height: auto; margin: 0;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:100%;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:100%;}
+	#buttonList li{top: -49px!important;}
+
+	#recipe{display: none;}
+	.join{display: none;}
+	.slider_text_panel{display: none;}
+	.touch_left_btn img{width: 48px;}
+	.touch_right_btn img{width: 48px;}
+
+	#online_wrap{width: 33%;}
+	
+	
+	
+	/* 박스슬라이드 */
+	#bestgoods_zone{clear: both;}
+	#best_bg{width: 100%;}
+	#best_bg > .bx-wrapper > .bx-viewport > ul li{width: 160px!important;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 690px!important;}
+	
+	/* 푸터 */
+	#happy_call{padding-bottom: 0px; height: 280px;}
+	#happy_call .wrap01{width: 100%; clear: left; background-position: -180px 0;}
+	#happy_call .wrap02{width: 100%; background-position: 60px 0;}
+	#award{display: none;}	
+	.store{background-position-x: 65%;}
+}/* (max-width:860px) */
+
+@media screen and (max-width:768px) {
+    .head_info{display: none;}
+	#util_menu{display: none;}
+	#sch_f{display: none;}
+	#gnb_wrap{display: none; top: 85px;}
+	#date_wrap{display: none;}
+	#header{width: 100%; height: 55px; overflow: hidden; margin-bottom: 55px;}
+	#header h1{height: 28px;
+		position: absolute;
+		left: 44.1%;
+		top: 18px;
+		background-position: 0px -86px;
+		background-size: 203%;}
+	.phone_talmenu{display: block; position: absolute; top: 17.5px; left: 10px;}
+	.btnMenu img{width: 34px;}
+	#visual{height: auto;}
+	#mySwipe > ul > li{height: 260px;}	
+	#mySwipe > ul > li a{height: 260px;}	
+	.touch_left_btn {left: 2%; top: 51%;}
+	.touch_right_btn {right: 2%; top: 51%;}
+	.touch_left_btn img{width: 44px;}
+	.touch_right_btn img{width: 44px;}
+	.touch_bullet{left:55%;}
+	.touch_bullet li img{width:13px;}
+	
+	/* 인기상품 컨텐츠 */
+	#contents{width: auto;}
+	#main_goods{width: auto;}
+	#main_goods .goods_fl:nth-child(3){display: none;}
+	#main_goods .goods_fl:nth-child(4){display: none;}
+	#main_goods .goods_fl:nth-child(5){display: none;}
+	.goods_fl{width: 100%;}
+	.goods_box{width: 43.7%; height: 450px;}
+	.goods_box img{width: 100%; height: 450px;}
+	.goods_img01 {width: 100%;}
+	.goods_img02 {width: 100%;}
+	.goods_img05 {width: 100%;}
+	.goods_info {text-align: center;}
+	.goods_info p{font-size: 19px;}
+	
+		/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 92.6%; margin-left: 0px;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%;}
+	#tabmenu{width: 92.6%; margin: 50px 0 0;}
+	.tab_more{display: block;} 
+	#event_wrap{width: 92.6%; margin-top: 80px; margin-bottom: 40px;}
+	#brandVisual{width: 100%; height: auto; margin: 0;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:100%;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:100%;}
+	#buttonList li{top: -20px!important;}
+
+	
+	/* 박스슬라이드 */
+	#best_bg{width: 100%;}
+	#best_bg > .bx-wrapper > .bx-viewport > ul li{width: 155px!important;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 525px!important;}
+
+	/* 맵 & 파트너 */ 
+	#map_wrap{width: 90%;}
+ 	#online_wrap{display: none;}
+
+	/* 푸터 */
+	#inner_footer{height: 180px;}
+	#happy_call{padding-bottom: 0px; height: 280px;}
+	#happy_call .wrap01{width: 100%; clear: left; background-position: -260px 0;}
+	#happy_call .wrap02{width: 100%; background-position: -20px 0;}
+
+	.store{background-position-x: 70%;}
+	
+	.mobilefoot{display: block; width: 100%; height: 50px; position: fixed; bottom: 0px; background-color: #ffffff;}
+	.mobilefoot ul{width: 100%; height: 50px;}
+	.mobilefoot ul li{width: 25%; height: 50px; float: left;}
+	.mobilefoot ul li a{display: block; width: 100%; height: 50px; text-align: center;}
+	.mobilefoot ul li a span{
+		margin-top: 0.750rem;
+		display: inline-block;
+		height: 2.91666667rem;
+		line-height: 2.41666667rem;
+		background-image: url(../img/mobile_footer.png);
+		text-indent: -833.25rem;
+		background-size: 160px auto;
+		background-repeat: no-repeat;}
+	.mobilefoot ul li a span.mf1{width: 1.233rem; background-position-x: .41666667rem; height: 2.1rem;}
+	.mobilefoot ul li a span.mf2{width: 1.9rem; background-position-x: -1.583rem;}
+	.mobilefoot ul li a span.mf3{width: 2.533rem; background-position-x: -3.8rem;}
+	.mobilefoot ul li a span.mf4{width: 3.167rem; background-position-x: -6.633rem;}
+}/* (max-width:768px) */
+
+@media screen and (max-width:600px) {
+    .head_info{display: none;}
+	#util_menu{display: none;}
+	#sch_f{display: none;}
+	#gnb_wrap{display: none; top: 85px;}
+	#date_wrap{display: none;}
+	#header{width: 100%; height: 50px; overflow: hidden; margin-bottom: 55px;}
+	#header h1{height: 28px;
+		position: absolute;
+		left: 41%;
+		top: 15px;
+		background-position: 0px -83px;
+		background-size: 197%;}
+	.phone_talmenu{display: block; position: absolute; top: 15px; left: 10px;}
+	.btnMenu img{width: 33px;}
+	#visual{height: auto;}
+	#mySwipe > ul > li{height: 200px;}			
+	#mySwipe > ul > li a{height: 200px;}
+	.touch_left_btn {left: 2%; top: 51%;}
+	.touch_right_btn {right: 2%; top: 51%;}
+	.touch_left_btn img{width: 36px;}
+	.touch_right_btn img{width: 36px;}
+	.touch_bullet{left:58.3%;}
+	.touch_bullet li img{width:12px;}
+
+	
+	/* 인기상품 컨텐츠 */
+	#contents{width: auto;}
+	#main_goods{width: auto;}
+	#main_goods .goods_fl:nth-child(2){display: none;}	
+	#main_goods .goods_fl:nth-child(3){display: none;}
+	#main_goods .goods_fl:nth-child(4){display: none;}
+	#main_goods .goods_fl:nth-child(5){display: none;}
+	.goods_fl{width: 100%;}
+	.goods_box{width: 92.6%; height: 450px;}
+	.goods_box img{width: 100%; height: 450px;}
+	.goods_img01 {width: 100%;}
+	.goods_img05 {width: 100%;}
+	.goods_info {text-align: center;}
+	.goods_info p{font-size: 19px;}
+
+		/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 92.6%; margin-left: 0px;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%;}
+	#tabmenu{width: 92.6%; margin: 10px 0 0;}
+	.tab_more{display: block;} 
+	#event_wrap{width: 92.6%; margin-top: 40px; margin-bottom: 40px;}
+	#brandVisual{width: 100%; height: auto; margin: 0;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:100%;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:100%;}
+	#buttonList li{top: -40px!important;}
+
+	/* 박스슬라이드 */
+	#best_bg{width: 100%;}
+	#best_bg > .bx-wrapper > .bx-viewport > ul li{width: 155px!important; margin-right: 5px!important;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 330px!important;}
+	
+	
+	/* 맵 & 파트너 */ 
+	#map_wrap{width: 85%;}
+ 	#online_wrap{display: none;}
+
+	/* 푸터 */
+	#inner_footer{height: 180px;}
+	#happy_call{padding-bottom: 0px; height: 280px;}
+	#happy_call .wrap01{width: 100%; clear: left; background: url(../img/footer_btn1_600.png) left no-repeat; background-position: -260px 0;}
+	#happy_call .wrap02{width: 100%; background: url(../img/footer_btn2_600.png) left no-repeat; background-position: -20px 0;}
+	address{left: 165px;}
+	
+	.store{background-position-x: 72%;}
+}/* (max-width:600px) */
+
+@media screen and (max-width:480px) {
+    .head_info{display: none;}
+	#util_menu{display: none;}
+	#sch_f{display: none;}
+	#gnb_wrap{display: none; top: 85px;}
+	#date_wrap{display: none;}
+	#header{width: 100%; height: 50px; overflow: hidden; margin-bottom: 55px;}
+	#header h1{height: 28px;
+		position: absolute;
+		left: 38%;
+		top: 15px;
+		background-position: 0px -83px;
+		background-size: 197%;}
+	#visual{height: auto;}
+	#mySwipe > ul > li{height: 270px;}	
+	#mySwipe > ul > li a{height: 270px;}			
+	.main_visual1{background:url(../img/visual01_m.jpg) top center no-repeat; background-size: contain;}
+	.main_visual2{background:url(../img/visual02_m.jpg) top center no-repeat; background-size: contain;}
+	.main_visual3{background:url(../img/visual03_m.jpg) top center no-repeat; background-size: contain;}
+	.main_visual4{background:url(../img/visual04_m.jpg) top center no-repeat; background-size: contain;}	
+	.phone_talmenu{display: block; position: absolute; top: 15px; left: 10px;}
+	.btnMenu img{width: 33px;}
+	.touch_left_btn {left: 1.333%; top: 56%;}
+	.touch_right_btn {right: 1.333%; top: 56%;}
+	.touch_left_btn img{width: 28px;}
+	.touch_right_btn img{width: 28px;}
+	.touch_bullet{left:64.7%; top: 88%;}
+	.touch_bullet li img{width:10px;}
+
+	/* 인기상품 컨텐츠 */
+	#contents{width: auto; padding-left: 30px;}
+	#main_goods{width: auto;}
+	#main_goods .goods_fl:nth-child(2){display: none;}
+	#main_goods .goods_fl:nth-child(3){display: none;}
+	#main_goods .goods_fl:nth-child(4){display: none;}
+	#main_goods .goods_fl:nth-child(5){display: none;}
+	.goods_fl{width: 100%;}
+	.goods_box{width: 90%; height: 450px;}
+	.goods_box img{width: 100%; height: 450px;}
+	.goods_img01 {width: 100%;}
+	.goods_img05 {width: 100%;}
+	.goods_info {text-align: center;}
+	#contents_top{margin-top: 30px}
+	
+		/* 행사상품 컨텐츠 */
+	.kfcapp{display: none;}
+	#roll_banner_wrap {width: 92.6%; margin-left: 0px; height: 360px;}	
+	#roll_banner_wrap>dl>dd>a>img{width:100%;}
+	#tabmenu{width: 92.6%; margin: 0; display: none;}
+	.tab_more{display: block;} 
+	#event_wrap{width: 92.6%; margin-top: 0px; margin-bottom: 0px;}
+	#brandVisual{width: 100%; height: auto; margin: 0;}
+	#brandVisual .visual_0{left:1px; background: url(../img/event01.jpg) center center no-repeat;  background-size:100%;}
+	#brandVisual .visual_1{left:100%; background: url(../img/event02.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_2{left:200%; background: url(../img/event03.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_3{left:300%; background: url(../img/event04.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_4{left:400%; background: url(../img/event05.jpg) center center no-repeat; background-size:100%;}
+	#brandVisual .visual_5{left:500%; background: url(../img/event06.jpg) center center no-repeat; background-size:100%;}
+	#buttonList li{top: -40px!important;}
+	
+	/* 박스슬라이드 */
+	#bestgoods_zone{clear: both;}
+	#best_bg{width: 100%;}
+	#best_bg > .bx-wrapper > .bx-viewport > ul li{width: 170px!important; margin-right: 5px!important;}
+	#best_bg .next_btn{right: 5%;}
+	.bx-wrapper{width: 170px!important;}
+
+	/* 맵 & 파트너 */ 
+	#map_wrap{width: 90%;}
+ 	#online_wrap{width: 100%; display: block; clear: both; float: left; margin-top: 30px;}
+ 	#online_wrap ul{width: 100%; height: auto;}
+ 	#online_wrap ul li{width: 39%; height: auto; margin: 0; float:left; margin-right: 15px; margin-bottom: 15px;}
+	#online_wrap ul li img{width: 100%;}
+	#online_wrap li:nth-child(2){clear: none; margin-right: 0px;}
+	#online_wrap li:nth-child(3){display: block;}
+	#online_wrap li:nth-child(4){margin-right: 0px; display: block;}
+	#online_wrap li:nth-child(5){display: block;}
+	#online_wrap li:nth-child(6){display: block;}
+	/* 푸터 */
+	.store .cup{display: none;}
+	#inner_footer{width: auto; height: 260px; overflow: hidden;}	
+	#happy_call .wrap01{width: 100%; clear: left; background: url(../img/footer_btn1_600.png) left no-repeat; background-position: -470px 0;}
+	#happy_call .wrap02{width: 100%; background: url(../img/footer_btn2_600.png) left no-repeat; background-position: -240px 0;}
+	address{left: 165px;}
+
+	#inner_footer h3.footer_logo{left: 40%; top: 85px;}
+	address{left: 10%; top: 134px; }
+	.store{background-position-x: 77%;}
+}/* (max-width:480px) */

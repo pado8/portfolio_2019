@@ -1,0 +1,13 @@
+﻿#wrap{width: 100%; margin: 0 auto; position:relative}
+#topHeader{width: 100%; height:209px; margin: 0 auto 30px; background: #1a5e8c;}
+#mainVisual{width: 1400px; height:1200px; margin: 0 auto; }
+#mainRight{float: left; width: 1100px; height:1200px;}
+		
+#joinWrap{width: 1100px; height:1000px;}
+.pwchBox{width: 800px; height:1000px; margin: 0 auto; padding: 20px;}
+.pwchBox h3{padding: 15px 0; margin-bottom:10px;  font-size: 23px;}
+.pwchIp div{width: 100%; height: 30px; padding: 15px 0; border-bottom: 1px solid #999999; margin-bottom: 15px;}
+.pwchIp span{width: 15%; height: 30px; display: block; float:left; padding-top: 1px;}
+.pwchIp input{width: 20%; height: 25px;}
+.pwchIp .pwchBtn{width: 200px; margin: 15px auto; border: none;}
+.pwchIp .pwchBtn input{width: 100%; height: 40px; background-color: #267dde; color: #ffffff;}
